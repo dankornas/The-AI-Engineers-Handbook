@@ -1,15 +1,14 @@
-# Adding Grid Lines
+{% embed url="https://www.youtube.com/channel/UC5k0oh-js7XWB9bOZ0cRpCQ" %}
+<mark style="color:blue;">**Youtube video explanation Coming Soon!**</mark> \
+Be sure to subscribe to stay up-to-date with new releases!
+{% endembed %}
 
-***
-
-### Add Grid Lines to a Plot
+# Add Grid Lines to a Plot
 
 With Pyplot, you can use the `grid()` function to add grid lines to the plot.
 
-#### Example
-
 Add grid lines to the plot:
-
+```python
 import numpy as np\
 import matplotlib.pyplot as plt
 
@@ -25,25 +24,18 @@ plt.plot(x, y)
 plt.grid()
 
 plt.show()
+```
 
-#### Result:
+![img_matplotlib_grid](https://user-images.githubusercontent.com/86244964/197054976-37222124-de6e-430c-9f23-154bdde14e4a.png)
 
-Try it Yourself »
-
-***
-
-***
-
-### Specify Which Grid Lines to Display
+# Specify Which Grid Lines to Display
 
 You can use the `axis` parameter in the `grid()` function to specify which grid lines to display.
 
 Legal values are: 'x', 'y', and 'both'. Default value is 'both'.
 
-#### Example
-
 Display only grid lines for the x-axis:
-
+```python
 import numpy as np\
 import matplotlib.pyplot as plt
 
@@ -59,15 +51,12 @@ plt.plot(x, y)
 plt.grid(axis = 'x')
 
 plt.show()
-
-#### Result:
-
-Try it Yourself »
-
-#### Example
+```
+![img_matplotlib_grid_axisx](https://user-images.githubusercontent.com/86244964/197055076-18e73a70-e36d-4008-b99f-160ba9458b77.png)
 
 Display only grid lines for the y-axis:
 
+```python
 import numpy as np\
 import matplotlib.pyplot as plt
 
@@ -83,21 +72,15 @@ plt.plot(x, y)
 plt.grid(axis = 'y')
 
 plt.show()
+```
+![img_matplotlib_grid_axisy](https://user-images.githubusercontent.com/86244964/197055136-2928175c-1e49-4f28-9d76-71100564ebe4.png)
 
-#### Result:
-
-Try it Yourself »
-
-***
-
-### Set Line Properties for the Grid
+# Set Line Properties for the Grid
 
 You can also set the line properties of the grid, like this: grid(color = '_color_', linestyle = '_linestyle_', linewidth = _number_).
 
-#### Example
-
 Set the line properties of the grid:
-
+```python
 import numpy as np\
 import matplotlib.pyplot as plt
 
@@ -113,10 +96,16 @@ plt.plot(x, y)
 plt.grid(color = 'green', linestyle = '--', linewidth = 0.5)
 
 plt.show()
+```
+![img_matplotlib_grid_kwargs](https://user-images.githubusercontent.com/86244964/197055229-0ab15e10-041a-467e-87ed-ccf73a7e172c.png)
 
-#### Result:
 
-Try it Yourself »
+{% hint style="info" %}
+### Want to learn more?
 
-\
-\
+Be sure to sign up for <mark style="color:blue;">**The AI Engineer Master Class**</mark> to get more in depth explanations and video tutorials of end-to-end Machine Learning Projects.&#x20;
+
+:arrow\_down::arrow\_down: Click the link below to sign up and stay up-to-date for new releases! :arrow\_down::arrow\_down:
+{% endhint %}
+
+{% embed url="https://www.getrevue.co/profile/dankornas" %}
