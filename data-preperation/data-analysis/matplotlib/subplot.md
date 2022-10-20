@@ -1,15 +1,14 @@
-# Subplot
+{% embed url="https://www.youtube.com/channel/UC5k0oh-js7XWB9bOZ0cRpCQ" %}
+<mark style="color:blue;">**Youtube video explanation Coming Soon!**</mark> \
+Be sure to subscribe to stay up-to-date with new releases!
+{% endembed %}
 
-***
+# Display Multiple Plots
 
-### Display Multiple Plots
-
-With the `subplot()` function you can draw multiple plots in one figure:
-
-#### Example
+With the `subplot()` function you can draw multiple plots in one figure.
 
 Draw 2 plots:
-
+```python
 import matplotlib.pyplot as plt\
 import numpy as np
 
@@ -28,33 +27,30 @@ plt.subplot(1, 2, 2)\
 plt.plot(x,y)
 
 plt.show()
+```
 
-#### Result:
+![img_matplotlib_subplots1](https://user-images.githubusercontent.com/86244964/197056245-71ee53c9-26df-4d0b-bb3a-eddb8041c1b6.png)
 
-Try it Yourself »
-
-***
-
-### The subplot() Function
+# The subplot() Function
 
 The `subplot()` function takes three arguments that describes the layout of the figure.
 
 The layout is organized in rows and columns, which are represented by the _first_ and _second_ argument.
 
 The third argument represents the index of the current plot.
-
+```python
 plt.subplot(1, 2, 1)\
 \#the figure has 1 row, 2 columns, and this plot is the _first_ plot.
-
+```
+```python
 plt.subplot(1, 2, 2)\
 \#the figure has 1 row, 2 columns, and this plot is the _second_ plot.
-
+```
 So, if we want a figure with 2 rows an 1 column (meaning that the two plots will be displayed on top of each other instead of side-by-side), we can write the syntax like this:
-
-#### Example
 
 Draw 2 plots on top of each other:
 
+```python
 import matplotlib.pyplot as plt\
 import numpy as np
 
@@ -73,17 +69,14 @@ plt.subplot(2, 1, 2)\
 plt.plot(x,y)
 
 plt.show()
+```
 
-#### Result:
-
-Try it Yourself »
+![img_matplotlib_subplots2](https://user-images.githubusercontent.com/86244964/197056429-dd7cefe3-7c05-4eda-96e9-3d298020bbfe.png)
 
 You can draw as many plots you like on one figure, just descibe the number of rows, columns, and the index of the plot.
 
-#### Example
-
 Draw 6 plots:
-
+```python
 import matplotlib.pyplot as plt\
 import numpy as np
 
@@ -124,23 +117,15 @@ plt.subplot(2, 3, 6)\
 plt.plot(x,y)
 
 plt.show()
+```
+![img_matplotlib_subplots3](https://user-images.githubusercontent.com/86244964/197056527-0031d13a-70b3-42a5-a792-586635323702.png)
 
-#### Result:
-
-Try it Yourself »
-
-***
-
-***
-
-### Title
+# Title
 
 You can add a title to each plot with the `title()` function:
 
-#### Example
-
 2 plots, with titles:
-
+```python
 import matplotlib.pyplot as plt\
 import numpy as np
 
@@ -161,21 +146,16 @@ plt.plot(x,y)\
 plt.title("INCOME")
 
 plt.show()
+```
 
-#### Result:
+![img_matplotlib_subplots4](https://user-images.githubusercontent.com/86244964/197056603-3e281177-bcab-4895-9c8b-f94fde0f8d31.png)
 
-Try it Yourself »
-
-***
-
-### Super Title
+# Super Title
 
 You can add a title to the entire figure with the `suptitle()` function:
 
-#### Example
-
 Add a title for the entire figure:
-
+```python
 import matplotlib.pyplot as plt\
 import numpy as np
 
@@ -197,11 +177,16 @@ plt.title("INCOME")
 
 plt.suptitle("MY SHOP")\
 plt.show()
+```
+![img_matplotlib_subplots5](https://user-images.githubusercontent.com/86244964/197056695-63a2abb5-0192-4768-84d3-90756888de38.png)
 
-#### Result:
+{% hint style="info" %}
+### Want to learn more?
 
-Try it Yourself »
+Be sure to sign up for <mark style="color:blue;">**The AI Engineer Master Class**</mark> to get more in depth explanations and video tutorials of end-to-end Machine Learning Projects.&#x20;
 
-***
+:arrow\_down::arrow\_down: Click the link below to sign up and stay up-to-date for new releases! :arrow\_down::arrow\_down:
+{% endhint %}
 
-\
+{% embed url="https://www.getrevue.co/profile/dankornas" %}
+
