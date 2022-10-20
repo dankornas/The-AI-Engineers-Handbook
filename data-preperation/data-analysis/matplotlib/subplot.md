@@ -1,4 +1,4 @@
-# Matplotlib Subplot
+# Subplot
 
 ***
 

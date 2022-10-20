@@ -1,4 +1,4 @@
-# Matplotlib Labels and Title
+# Labels and Title
 
 ***
 

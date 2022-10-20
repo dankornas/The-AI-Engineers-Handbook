@@ -1,4 +1,4 @@
-# Matplotlib Getting Started
+# Installing Matplotlib
 
 ***
 

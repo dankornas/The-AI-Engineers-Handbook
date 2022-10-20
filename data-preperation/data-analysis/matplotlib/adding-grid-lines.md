@@ -1,4 +1,4 @@
-# Matplotlib Adding Grid Lines
+# Adding Grid Lines
 
 ***
 

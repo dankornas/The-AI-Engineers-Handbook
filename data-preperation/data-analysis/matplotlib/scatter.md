@@ -1,4 +1,4 @@
-# Matplotlib Scatter
+# Scatter
 
 ***
 

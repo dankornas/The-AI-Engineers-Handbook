@@ -1,4 +1,4 @@
-# Matplotlib Pie Charts
+# Pie Charts
 
 ***
 
