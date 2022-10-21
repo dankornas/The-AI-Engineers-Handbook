@@ -1,14 +1,12 @@
 # Installing Matplotlib
 
-***
-
 ### Installation of Matplotlib
 
 If you have Python and PIP already installed on a system, then installation of Matplotlib is very easy.
 
 Install it using this command:
 
-C:\Users\\_Your Name_>pip install matplotlib
+`C:\Users\`_`Your Name`_`> pip install matplotlib`
 
 If this command fails, then use a python distribution that already has Matplotlib installed,  like Anaconda, Spyder etc.
 
@@ -16,9 +14,9 @@ If this command fails, then use a python distribution that already has Matplotli
 
 ### Import Matplotlib
 
-Once Matplotlib is installed, import it in your applications by adding the `import`` `_`module`_ statement:
+Once Matplotlib is installed, import it in your applications by adding the `import`` `_`module`_ statement.
 
-Now Matplotlib is imported and ready to use:
+Now Matplotlib is imported and ready to use.
 
 ***
 

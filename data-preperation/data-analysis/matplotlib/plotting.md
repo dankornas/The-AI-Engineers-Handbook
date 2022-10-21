@@ -1,11 +1,11 @@
 # Plotting
 
 {% embed url="https://www.youtube.com/channel/UC5k0oh-js7XWB9bOZ0cRpCQ" %}
-<mark style="color:blue;">**Youtube video explanation Coming Soon!**</mark> \
+<mark style="color:blue;">**Youtube video explanation Coming Soon!**</mark>\
 Be sure to subscribe to stay up-to-date with new releases!
 {% endembed %}
 
-# Plotting x and y points
+## Plotting x and y points
 
 The `plot()` function is used to draw points (markers) in a diagram.
 
@@ -31,14 +31,14 @@ ypoints = np.array(\[3, 10])
 plt.plot(xpoints, ypoints)\
 plt.show()
 ```
-![img_matplotlib_plotting1](https://user-images.githubusercontent.com/86244964/197047956-2b141f56-3192-4490-9dba-241935a4802e.png)
+
+![img\_matplotlib\_plotting1](https://user-images.githubusercontent.com/86244964/197047956-2b141f56-3192-4490-9dba-241935a4802e.png)
 
 The **x-axis** is the horizontal axis.
 
 The **y-axis** is the vertical axis.
 
-
-# Plotting Without Line
+## Plotting Without Line
 
 To plot only the markers, you can use _shortcut string notation_ parameter 'o', which means 'rings'.
 
@@ -54,9 +54,10 @@ ypoints = np.array(\[3, 10])
 plt.plot(xpoints, ypoints, 'o')\
 plt.show()
 ```
-![img_matplotlib_plot_o](https://user-images.githubusercontent.com/86244964/197048000-2617856a-3331-4cea-a403-3fa57c236006.png)
 
-# Multiple Points
+![img\_matplotlib\_plot\_o](https://user-images.githubusercontent.com/86244964/197048000-2617856a-3331-4cea-a403-3fa57c236006.png)
+
+## Multiple Points
 
 You can plot as many points as you like, just make sure you have the same number of points in both axis.
 
@@ -72,9 +73,10 @@ ypoints = np.array(\[3, 8, 1, 10])
 plt.plot(xpoints, ypoints)\
 plt.show()
 ```
-![img_matplotlib_plotting2](https://user-images.githubusercontent.com/86244964/197048022-f90e240f-1162-4d6f-8dc6-1e0efef6b029.png)
 
-# Default X-Points
+![img\_matplotlib\_plotting2](https://user-images.githubusercontent.com/86244964/197048022-f90e240f-1162-4d6f-8dc6-1e0efef6b029.png)
+
+## Default X-Points
 
 If we do not specify the points in the x-axis, they will get the default values 0, 1, 2, 3, (etc. depending on the length of the y-points.
 
@@ -91,14 +93,15 @@ ypoints = np.array(\[3, 8, 1, 10, 5, 7])
 plt.plot(ypoints)\
 plt.show()
 ```
-![img_matplotlib_plotting4](https://user-images.githubusercontent.com/86244964/197048042-74f53d07-3d19-4670-a22d-de81226b2a40.png)
+
+![img\_matplotlib\_plotting4](https://user-images.githubusercontent.com/86244964/197048042-74f53d07-3d19-4670-a22d-de81226b2a40.png)
 
 The **x-points** in the example above is \[0, 1, 2, 3, 4, 5].
 
 {% hint style="info" %}
-### Want to learn more?
+#### Want to learn more?
 
-Be sure to sign up for <mark style="color:blue;">**The AI Engineer Master Class**</mark> to get more in depth explanations and video tutorials of end-to-end Machine Learning Projects.&#x20;
+Be sure to sign up for <mark style="color:blue;">**The AI Engineer Master Class**</mark> to get more in depth explanations and video tutorials of end-to-end Machine Learning Projects.
 
 :arrow\_down::arrow\_down: Click the link below to sign up and stay up-to-date for new releases! :arrow\_down::arrow\_down:
 {% endhint %}

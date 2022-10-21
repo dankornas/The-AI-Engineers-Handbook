@@ -1,9 +1,11 @@
+# Histograms
+
 {% embed url="https://www.youtube.com/channel/UC5k0oh-js7XWB9bOZ0cRpCQ" %}
-<mark style="color:blue;">**Youtube video explanation Coming Soon!**</mark> \
+<mark style="color:blue;">**Youtube video explanation Coming Soon!**</mark>\
 Be sure to subscribe to stay up-to-date with new releases!
 {% endembed %}
 
-# Histogram
+## Histogram
 
 A histogram is a graphical representation of _frequency_ distributions.
 
@@ -11,7 +13,7 @@ It is a graph that displays the number of observations within each interval.
 
 For example, if you ask for the height of 250 persons, you can get a histogram that looks like this:
 
-![img_matplotlib_histogram1](https://user-images.githubusercontent.com/86244964/197152281-1fe5a7d3-df44-46e9-b776-a1778daf6894.png)
+![img\_matplotlib\_histogram1](https://user-images.githubusercontent.com/86244964/197152281-1fe5a7d3-df44-46e9-b776-a1778daf6894.png)
 
 You can read from the histogram that there are approximately:
 
@@ -26,7 +28,7 @@ You can read from the histogram that there are approximately:
 21 people from 185 to 190cm\
 4 people from 190 to 195cm
 
-# Create Histogram
+## Create Histogram
 
 To generate histograms in Matplotlib, we use the 'hist()' function.
 
@@ -35,6 +37,7 @@ The 'hist()' method will produce a histogram from an array of numbers, which is 
 For simplicity, we use NumPy to generate a random array of 250 values, with the values concentrating around 170 and the standard deviation set to 10. In our Machine Learning Tutorial, you can learn more about Normal Data Distribution.
 
 A Normal Data Distribution by NumPy:
+
 ```python
 import numpy as np
 
@@ -101,6 +104,7 @@ This will generate a _random_ result, and could look like this:
 The `hist()` function will read the array and produce a histogram.
 
 A simple histogram:
+
 ```python
 import matplotlib.pyplot as plt\
 import numpy as np
@@ -111,13 +115,12 @@ plt.hist(x)\
 plt.show()&#x20;
 ```
 
-![img_matplotlib_histogram1](https://user-images.githubusercontent.com/86244964/197152870-83a08a49-bd1a-4dd3-971f-3d41da2c13e7.png)
-
+![img\_matplotlib\_histogram1](https://user-images.githubusercontent.com/86244964/197152870-83a08a49-bd1a-4dd3-971f-3d41da2c13e7.png)
 
 {% hint style="info" %}
-### Want to learn more?
+#### Want to learn more?
 
-Be sure to sign up for <mark style="color:blue;">**The AI Engineer Master Class**</mark> to get more in depth explanations and video tutorials of end-to-end Machine Learning Projects.&#x20;
+Be sure to sign up for <mark style="color:blue;">**The AI Engineer Master Class**</mark> to get more in depth explanations and video tutorials of end-to-end Machine Learning Projects.
 
 :arrow\_down::arrow\_down: Click the link below to sign up and stay up-to-date for new releases! :arrow\_down::arrow\_down:
 {% endhint %}

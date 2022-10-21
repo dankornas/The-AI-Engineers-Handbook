@@ -1,13 +1,16 @@
+# Labels and Title
+
 {% embed url="https://www.youtube.com/channel/UC5k0oh-js7XWB9bOZ0cRpCQ" %}
-<mark style="color:blue;">**Youtube video explanation Coming Soon!**</mark> \
+<mark style="color:blue;">**Youtube video explanation Coming Soon!**</mark>\
 Be sure to subscribe to stay up-to-date with new releases!
 {% endembed %}
 
-# Create Labels for a Plot
+## Create Labels for a Plot
 
 With Pyplot, you can use the `xlabel()` and `ylabel()` functions to set a label for the x- and y-axis.
 
 Add labels to the x- and y-axis:
+
 ```python
 import numpy as np\
 import matplotlib.pyplot as plt
@@ -22,13 +25,15 @@ plt.ylabel("Calorie Burnage")
 
 plt.show()
 ```
-![img_matplotlib_labels](https://user-images.githubusercontent.com/86244964/197054360-4315acbf-b676-425a-852d-d10984d45078.png)
 
-# Create a Title for a Plot
+![img\_matplotlib\_labels](https://user-images.githubusercontent.com/86244964/197054360-4315acbf-b676-425a-852d-d10984d45078.png)
+
+## Create a Title for a Plot
 
 With Pyplot, you can use the `title()` function to set a title for the plot.
 
 Add a plot title and labels for the x- and y-axis:
+
 ```python
 import numpy as np\
 import matplotlib.pyplot as plt
@@ -44,13 +49,15 @@ plt.ylabel("Calorie Burnage")
 
 plt.show()
 ```
-![img_matplotlib_title](https://user-images.githubusercontent.com/86244964/197054461-eb79f644-cc2b-44b2-9882-dba7584b531b.png)
 
-# Set Font Properties for Title and Labels
+![img\_matplotlib\_title](https://user-images.githubusercontent.com/86244964/197054461-eb79f644-cc2b-44b2-9882-dba7584b531b.png)
+
+## Set Font Properties for Title and Labels
 
 You can use the `fontdict` parameter in `xlabel()`, `ylabel()`, and `title()` to set font properties for the title and labels.
 
 Set font properties for the title and labels:
+
 ```python
 import numpy as np\
 import matplotlib.pyplot as plt
@@ -68,15 +75,17 @@ plt.ylabel("Calorie Burnage", fontdict = font2)
 plt.plot(x, y)\
 plt.show()
 ```
-![img_matplotlib_title_fontdict](https://user-images.githubusercontent.com/86244964/197054588-d31a0b28-367b-4724-8fcd-e97b8afa5774.png)
 
-# Position the Title
+![img\_matplotlib\_title\_fontdict](https://user-images.githubusercontent.com/86244964/197054588-d31a0b28-367b-4724-8fcd-e97b8afa5774.png)
+
+## Position the Title
 
 You can use the `loc` parameter in `title()` to position the title.
 
 Legal values are: 'left', 'right', and 'center'. Default value is 'center'.
 
 Position the title to the left:
+
 ```python
 import numpy as np\
 import matplotlib.pyplot as plt
@@ -91,13 +100,13 @@ plt.ylabel("Calorie Burnage")
 plt.plot(x, y)\
 plt.show()
 ```
-![img_matplotlib_title_loc](https://user-images.githubusercontent.com/86244964/197054664-791d675c-086e-488c-9e31-e9b907e25cd9.png)
 
+![img\_matplotlib\_title\_loc](https://user-images.githubusercontent.com/86244964/197054664-791d675c-086e-488c-9e31-e9b907e25cd9.png)
 
 {% hint style="info" %}
-### Want to learn more?
+#### Want to learn more?
 
-Be sure to sign up for <mark style="color:blue;">**The AI Engineer Master Class**</mark> to get more in depth explanations and video tutorials of end-to-end Machine Learning Projects.&#x20;
+Be sure to sign up for <mark style="color:blue;">**The AI Engineer Master Class**</mark> to get more in depth explanations and video tutorials of end-to-end Machine Learning Projects.
 
 :arrow\_down::arrow\_down: Click the link below to sign up and stay up-to-date for new releases! :arrow\_down::arrow\_down:
 {% endhint %}
