@@ -80,15 +80,15 @@ print(numbers[1:4])
 ## Updating Tuples (by Concatenating)
 
 ```python
-tup1 = (12, 34.56);
-tup2 = ('abc', 'xyz');
+tup1 = (12, 34.56)
+tup2 = ('abc', 'xyz')
 
 # Following action is not valid for tuples
-# tup1[0] = 100;
+# tup1[0] = 100
 
 # Instead, you have to create a new tuple to update it
-tup3 = tup1 + tup2;
-print tup3;
+tup3 = tup1 + tup2
+print tup3
 
 ### Output ###
 # (12, 34.56, 'abc', 'xyz')

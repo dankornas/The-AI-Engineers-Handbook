@@ -7,7 +7,7 @@
 * Any items can be added to lists.
 * Lists are defined as objects with the data type `‘list’`.
 * Items in lists can be sorted, changed, and duplicated.
-* The `link()` constructor can be used when creating a new list.
+* The `list()` constructor can be used when creating a new list.
 * Accessing elements within a list is done the same way as accessing characters within a string - by using indexing and slicing methods.
 * Items inside a list are indexed, the first item has an index \[0], the second item has an index \[1], etc.
 

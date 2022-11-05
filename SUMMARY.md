@@ -93,9 +93,49 @@
 
 ## ML Model Development
 
-* [Model Selection](ml-model-development/model-selection.md)
-* [Model Improvement](ml-model-development/model-improvement.md)
-* [Model Evaluation](ml-model-development/model-evaluation.md)
+* [Machine Learning](ml-model-development/model-selection/README.md)
+  * [Supervised Learning](ml-model-development/model-selection/supervised-learning/README.md)
+    * [Regression](ml-model-development/model-selection/supervised-learning/regression/README.md)
+      * [Linear Regression](ml-model-development/model-selection/supervised-learning/regression/linear-regression.md)
+    * [Classification](ml-model-development/model-selection/supervised-learning/classification/README.md)
+      * [Naive Bayes](ml-model-development/model-selection/supervised-learning/classification/naive-bayes.md)
+      * [K-Nearest Neighbor](ml-model-development/model-selection/supervised-learning/classification/k-nearest-neighbor.md)
+      * [Logistic Regression](ml-model-development/model-selection/supervised-learning/classification/logistic-regression.md)
+      * [Decision Trees](ml-model-development/model-selection/supervised-learning/classification/decision-trees.md)
+  * [Unsupervised Learning](ml-model-development/model-selection/unsupervised-learning/README.md)
+    * [Association Rule Learning](ml-model-development/model-selection/unsupervised-learning/association-rule-learning/README.md)
+      * [Apriori Algorithm](ml-model-development/model-selection/unsupervised-learning/association-rule-learning/apriori-algorithm.md)
+    * [Clustering](ml-model-development/model-selection/unsupervised-learning/clustering/README.md)
+      * [Hierarchical Clustering](ml-model-development/model-selection/unsupervised-learning/clustering/hierarchical-clustering.md)
+      * [K-Means Clustering](ml-model-development/model-selection/unsupervised-learning/clustering/k-means-clustering.md)
+  * [Ensemble Learning](ml-model-development/model-selection/ensemble-learning/README.md)
+    * [Stacking](ml-model-development/model-selection/ensemble-learning/stacking.md)
+    * [Boosting](ml-model-development/model-selection/ensemble-learning/boosting.md)
+    * [Bagging](ml-model-development/model-selection/ensemble-learning/bagging.md)
+  * [Reinforcement Learning](ml-model-development/model-selection/reinforcement-learning/README.md)
+    * [Q-Learning](ml-model-development/model-selection/reinforcement-learning/q-learning.md)
+* [Deep Learning](ml-model-development/model-improvement/README.md)
+  * [Neural Networks](ml-model-development/model-improvement/neural-networks/README.md)
+    * [Loss Function](ml-model-development/model-improvement/neural-networks/loss-function.md)
+    * [Activation Functions](ml-model-development/model-improvement/neural-networks/activation-functions.md)
+    * [Weight Initialization](ml-model-development/model-improvement/neural-networks/weight-initialization.md)
+    * [Vanishing / Exploding Gradients](ml-model-development/model-improvement/neural-networks/vanishing-exploding-gradients.md)
+  * [Architectures](ml-model-development/model-improvement/architectures/README.md)
+    * [Feedforward Neural Network](ml-model-development/model-improvement/architectures/feedforward-neural-network.md)
+    * [Convolutional Neural Network (CNN)](ml-model-development/model-improvement/architectures/convolutional-neural-network-cnn.md)
+    * [Recurrent Neural Network (RNN)](ml-model-development/model-improvement/architectures/recurrent-neural-network-rnn/README.md)
+      * [LSTM](ml-model-development/model-improvement/architectures/recurrent-neural-network-rnn/lstm.md)
+      * [GRU](ml-model-development/model-improvement/architectures/recurrent-neural-network-rnn/gru.md)
+    * [Transformers](ml-model-development/model-improvement/architectures/transformers.md)
+    * [Generative Adversarial Netowork (GAN)](ml-model-development/model-improvement/architectures/generative-adversarial-netowork-gan.md)
+* [Model Evaluation](ml-model-development/model-evaluation/README.md)
+  * [Training, validation, and test data](ml-model-development/model-evaluation/training-validation-and-test-data.md)
+  * [Accuracy](ml-model-development/model-evaluation/accuracy.md)
+  * [Overfitting & Underfitting](ml-model-development/model-evaluation/overfitting-and-underfitting.md)
+  * [Percision, Recall & F1](ml-model-development/model-evaluation/percision-recall-and-f1.md)
+  * [Bias & Variance](ml-model-development/model-evaluation/bias-and-variance.md)
+  * [Area Under the Curve](ml-model-development/model-evaluation/area-under-the-curve.md)
+  * [Lift](ml-model-development/model-evaluation/lift.md)
 
 ## ML Model Deployment
 
@@ -106,8 +146,9 @@
 
 ## ML Model Maintenance
 
-* [MLOps](ml-model-maintenance/mlops.md)
+* [Maintenance](ml-model-maintenance/maintenance.md)
 * [Monitoring](ml-model-maintenance/monitoring.md)
+* [MLOps](ml-model-maintenance/mlops.md)
 
 ## Learn More
 
