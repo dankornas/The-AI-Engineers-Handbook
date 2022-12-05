@@ -58,6 +58,7 @@
     * [Subplot](data-preperation/data-analysis/matplotlib/subplot.md)
     * [Scatter](data-preperation/data-analysis/matplotlib/scatter.md)
     * [Bars](data-preperation/data-analysis/matplotlib/bars.md)
+    * [Better Bars](data-preperation/data-analysis/matplotlib/better-bars.md)
     * [Histograms](data-preperation/data-analysis/matplotlib/histograms.md)
     * [Pie Charts](data-preperation/data-analysis/matplotlib/pie-charts.md)
   * [Numpy](data-preperation/data-analysis/numpy/README.md)
