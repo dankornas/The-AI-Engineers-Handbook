@@ -1,2 +1,0 @@
-# Area Under the Curve
-

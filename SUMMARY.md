@@ -131,12 +131,17 @@
     * [Generative Adversarial Netowork (GAN)](ml-model-development/model-improvement/architectures/generative-adversarial-netowork-gan.md)
 * [Model Evaluation](ml-model-development/model-evaluation/README.md)
   * [Training, validation, and test data](ml-model-development/model-evaluation/training-validation-and-test-data.md)
-  * [Accuracy](ml-model-development/model-evaluation/accuracy.md)
   * [Overfitting & Underfitting](ml-model-development/model-evaluation/overfitting-and-underfitting.md)
-  * [Percision, Recall & F1](ml-model-development/model-evaluation/percision-recall-and-f1.md)
-  * [Bias & Variance](ml-model-development/model-evaluation/bias-and-variance.md)
-  * [Area Under the Curve](ml-model-development/model-evaluation/area-under-the-curve.md)
-  * [Lift](ml-model-development/model-evaluation/lift.md)
+  * [Evaluation Metrics for Regression](ml-model-development/model-evaluation/evaluation-metrics-for-regression/README.md)
+    * [Mean Absolute Error](ml-model-development/model-evaluation/evaluation-metrics-for-regression/mean-absolute-error.md)
+  * [Mean squared error](ml-model-development/model-evaluation/mean-squared-error.md)
+  * [Page 1](ml-model-development/model-evaluation/page-1.md)
+  * [Evaluation Metrics for Classification](ml-model-development/model-evaluation/evaluation-metrics-for-classification/README.md)
+    * [Accuracy](ml-model-development/model-evaluation/evaluation-metrics-for-classification/accuracy.md)
+    * [Percision, Recall & F1](ml-model-development/model-evaluation/evaluation-metrics-for-classification/percision-recall-and-f1.md)
+    * [Bias & Variance](ml-model-development/model-evaluation/evaluation-metrics-for-classification/bias-and-variance.md)
+    * [Area Under the Curve](ml-model-development/model-evaluation/evaluation-metrics-for-classification/area-under-the-curve.md)
+    * [Lift](ml-model-development/model-evaluation/evaluation-metrics-for-classification/lift.md)
 
 ## ML Model Deployment
 
