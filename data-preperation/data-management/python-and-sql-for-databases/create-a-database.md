@@ -11,7 +11,7 @@ To create a database with MySQL and Python, you will first need to import the my
 import mysql.connector
 ```
 
-Connecting to a MySQL Server
+### Connecting to a MySQL Server
 
 Once the mysql.connector module is imported, you can use the mysql.connector.connect() function to connect to a MySQL server. This function takes the server connection details, such as hostname, username, and password, as arguments and returns a connection object. Here is an example of connecting to a MySQL server:
 
@@ -26,7 +26,7 @@ cnx = mysql.connector.connect(
 )
 ```
 
-Creating a Database
+### Creating a Database
 
 Once you are connected to the MySQL server, you can create a new database using the mysql.connector.cursor() function and the CREATE DATABASE SQL statement. This function returns a cursor object that can be used to execute SQL queries. Here is an example of creating a database:
 
@@ -48,7 +48,7 @@ query = "CREATE DATABASE my_database"
 cursor.execute(query)
 ```
 
-Switching to the New Database
+### Switching to the New Database
 
 After creating the database, you can use the mysql.connector.cursor() function and the USE SQL statement to switch to the new database. This allows you&#x20;
 
