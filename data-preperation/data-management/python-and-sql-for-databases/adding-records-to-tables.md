@@ -5,101 +5,85 @@
 Be sure to subscribe to stay up-to-date with new releases!
 {% endembed %}
 
-To fill a table in MySQL, use the "INSERT INTO" statement.
-
-Insert a record in the "customers" table:
+To add records to a table in a database with MySQL and Python, you will first need to connect to the database using the mysql.connector.connect() function. This function takes the server connection details, such as hostname, username, and password, as arguments and returns a connection object. Here is an example of connecting to a MySQL server:
 
 ```python
 import mysql.connector
 
-mydb = mysql.connector.connect(
-  host="localhost",
-  user="yourusername",
-  password="yourpassword",
-  database="mydatabase"
+# Connect to the MySQL server
+cnx = mysql.connector.connect(
+    host="localhost",
+    user="username",
+    password="password"
 )
-
-mycursor = mydb.cursor()
-
-sql = "INSERT INTO customers (name, address) VALUES (%s, %s)"
-val = ("John", "Highway 21")
-mycursor.execute(sql, val)
-
-mydb.commit()
-
-print(mycursor.rowcount, "record inserted.")
 ```
 
-Important!: Notice the statement: mydb.commit(). It is required to make the changes, otherwise no changes are made to the table.
-
-## Insert Multiple Rows
-
-To insert multiple rows into a table, use the executemany() method.
-
-The second parameter of the executemany() method is a list of tuples, containing the data you want to insert:
+Once you are connected to the database, you can create a cursor object for executing SQL queries using the mysql.connector.cursor() function. This function takes the connection object as an argument and returns a cursor object that can be used to execute SQL queries. Here is an example of creating a cursor object:
 
 ```python
 import mysql.connector
 
-mydb = mysql.connector.connect(
-  host="localhost",
-  user="yourusername",
-  password="yourpassword",
-  database="mydatabase"
+# Connect to the MySQL server
+cnx = mysql.connector.connect(
+    host="localhost",
+    user="username",
+    password="password"
 )
 
-mycursor = mydb.cursor()
-
-sql = "INSERT INTO customers (name, address) VALUES (%s, %s)"
-val = [
-  ('Peter', 'Lowstreet 4'),
-  ('Amy', 'Apple st 652'),
-  ('Hannah', 'Mountain 21'),
-  ('Michael', 'Valley 345'),
-  ('Sandy', 'Ocean blvd 2'),
-  ('Betty', 'Green Grass 1'),
-  ('Richard', 'Sky st 331'),
-  ('Susan', 'One way 98'),
-  ('Vicky', 'Yellow Garden 2'),
-  ('Ben', 'Park Lane 38'),
-  ('William', 'Central st 954'),
-  ('Chuck', 'Main Road 989'),
-  ('Viola', 'Sideway 1633')
-]
-
-mycursor.executemany(sql, val)
-
-mydb.commit()
-
-print(mycursor.rowcount, "was inserted.")
+# Create a cursor object for executing SQL queries
+cursor = cnx.cursor()
 ```
 
-## Get Inserted ID
+## Adding Records
 
-You can get the id of the row you just inserted by asking the cursor object. If you insert more than one row, the id of the last inserted row is returned.
+After creating the cursor object, you can use the INSERT SQL statement to add records to the table. This statement specifies the values to be inserted into the columns of the table. Here is an example of inserting records into a table:
 
 ```python
 import mysql.connector
 
-mydb = mysql.connector.connect(
-  host="localhost",
-  user="yourusername",
-  password="yourpassword",
-  database="mydatabase"
+# Connect to the MySQL server
+cnx = mysql.connector.connect(
+    host="localhost",
+    user="username",
+    password="password"
 )
 
-mycursor = mydb.cursor()
+# Create a cursor object for executing SQL queries
+cursor = cnx.cursor()
 
-sql = "INSERT INTO customers (name, address) VALUES (%s, %s)"
-val = ("Michelle", "Blue Village")
-mycursor.execute(sql, val)
-
-mydb.commit()
-
-print("1 record inserted, ID:", mycursor.lastrowid)
+# Insert records into the "users" table
+query = "INSERT INTO users (username, password) VALUES ('user1', 'password1'), ('user2', 'password2')"
+cursor.execute(query)
 ```
 
+In this example, the INSERT statement is used to insert two rows into the "users" table. The "username" and "password" values are specified for each row.
 
+After inserting records into the table, you can commit the changes to the database using the mysql.connector.commit() function. This function takes the connection object as an argument and saves the changes to the database. Here is an example of committing changes to the database:
+
+```python
+import mysql.connector
+
+# Connect to the MySQL server
+cnx = mysql.connector.connect(
+    host="localhost",
+    user="username",
+    password="password"
+)
+
+# Create a cursor object for executing SQL queries
+cursor = cnx.cursor()
+
+# Insert records into the "users" table
+query = "INSERT INTO users (username, password) VALUES ('user1', 'password1'), ('user2', 'password2')"
+cursor.execute(query)
+
+# Commit the changes to the database
+cnx.commit()
+```
+
+In this example, the mysql.connector.commit() function is used to save the changes to the database after inserting records into the "users" table.
+
+In summary, to add records to a table in a database with MySQL and Python, you will need to connect to the database, create a cursor object, use the INSERT SQL statement to insert records into the table, and commit the changes to the database using the mysql.connector.commit() function.
 
 {% hint style="info" %}
 ### Want to learn more?
