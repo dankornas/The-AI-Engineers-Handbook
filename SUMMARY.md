@@ -8,6 +8,7 @@
 
 ## Programming Skills
 
+* [Version Control with Git](programming-skills/version-control-with-git.md)
 * [Python Programming](programming-skills/python-programming/README.md)
   * [Data Types](programming-skills/python-programming/data-types.md)
   * [Strings](programming-skills/python-programming/strings.md)
