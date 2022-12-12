@@ -1,2 +1,3 @@
 # Ensemble Learning
 
+Ensemble learning is a type of machine learning where multiple models are trained and combined to produce a more accurate or robust prediction than any of the individual models could provide on their own. Ensemble learning is based on the idea that multiple models, each trained on the same dataset, can learn complementary patterns and make more accurate predictions when their outputs are combined. There are many different ways to combine the outputs of multiple models, such as taking the average of the outputs or training a meta-model to make predictions based on the outputs of the individual models. Ensemble learning can be used for a variety of tasks, such as classification, regression, or anomaly detection.

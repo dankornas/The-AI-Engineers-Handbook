@@ -1,61 +1,53 @@
 # Read Files
 
-## Open a File on the Server
+##
 
-```
-# examplefile.txt
+To read a file with Python, you will first need to open the file using the open() function. This function takes the file path and the access mode as arguments, and returns a file object.
 
-Hello! Welcome to demofile.txt
-This file is for testing purposes.
-Good Luck!
-```
-
-You can open files with the `open` method.
+To open a file for reading, you will use the 'r' access mode. Here is an example of opening a file for reading:
 
 ```python
-f = open("demofile.txt", "r")
-print(f.read())
+file = open('my_file.txt', 'r')
 ```
 
-If a file is located in a different location on the server, you need to specify the full path:
+Once the file is opened, you can use the read() method to read the entire contents of the file. The read() method returns the contents of the file as a string. Here is an example of using the read() method:
 
 ```python
-f = open("D:\\myfiles\welcome.txt", "r")
-print(f.read())
+file = open('my_file.txt', 'r')
+file_contents = file.read()
 ```
 
-## Read only parts of a files
-
-Using the `read()` method will return the entire content of a text file. By passing in a number you can specify the number of characters to read from the text file.
+If you only want to read a specific portion of the file, you can use the read() method with the length argument. This argument specifies the number of characters to read from the file. Here is an example of using the read() method with the length argument:
 
 ```python
-f = open("demofile.txt", "r")
-print(f.read(5))
+file = open('my_file.txt', 'r')
+file_contents = file.read(10)
 ```
 
-## Read lines
+In this example, the read() method will only return the first 10 characters of the file.
 
-You can return one line at a time using the `readline()` method.
+If you want to read each line of the file separately, you can use the readline() method. This method returns the next line of the file as a string. Here is an example of using the readline() method:
 
 ```python
-f = open("demofile.txt", "r")
-print(f.readline())
+file = open('my_file.txt', 'r')
+line1 = file.readline()
+line2 = file.readline()
 ```
 
-By looping through the lines of the file, you can read the whole file, line by line.
+In this example, the readline() method will return the first line of the file in the line1 variable, and the second line in the line2 variable.
+
+After you are finished reading the file, it is important to close the file using the close() method. This method frees up resources and ensures that any changes made to the file are saved. Here is an example of closing a file:
 
 ```python
-f = open("demofile.txt", "r")
-for x in f:
-  print(x)
+file = open('my_file.txt', 'r')
+file_contents = file.read()
+file.close()
 ```
 
-## Close Files
+In this example, the file is opened, read, and then closed using the close() method.
 
-It is a good practice to always close the file when you are done with it.
+In summary, to read a file with Python you need to:
 
-```python
-f = open("demofile.txt", "r")
-print(f.readline())
-f.close()
-```
+1. Open the file using the open() function
+2. Read the contents of the file using the read() method
+3. Close the file using the close() method

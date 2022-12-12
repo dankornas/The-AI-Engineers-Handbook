@@ -5,91 +5,139 @@
 Be sure to subscribe to stay up-to-date with new releases!
 {% endembed %}
 
+To create tables in a database with MySQL and Python, you will first need to connect to the database using the mysql.connector.connect() function. This function takes the server connection details, such as hostname, username, and password, as arguments and returns a connection object. Here is an example of connecting to a MySQL server:
+
+```python
+import mysql.connector
+
+# Connect to the MySQL server
+cnx = mysql.connector.connect(
+    host="localhost",
+    user="username",
+    password="password"
+)
+```
+
+Once you are connected to the database, you can create a cursor object for executing SQL queries using the mysql.connector.cursor() function. This function takes the connection object as an argument and returns a cursor object that can be used to execute SQL queries. Here is an example of creating a cursor object:
+
+```python
+import mysql.connector
+
+# Connect to the MySQL server
+cnx = mysql.connector.connect(
+    host="localhost",
+    user="username",
+    password="password"
+)
+
+# Create a cursor object for executing SQL queries
+cursor = cnx.cursor()
+```
+
+## Checking if a Table Exists
+
+Before creating a new table, you may want to check if a table with the same name already exists in the database. To check if a table exists, you can use the mysql.connector.cursor() function and the SHOW TABLES SQL statement. This statement returns a list of all the tables in the current database. You can then check if the table exists by checking if its name is in the list of tables. Here is an example of checking if a table exists:
+
+```python
+import mysql.connector
+
+# Connect to the MySQL server
+cnx = mysql.connector.connect(
+    host="localhost",
+    user="username",
+    password="password"
+)
+
+# Create a cursor object for executing SQL queries
+cursor = cnx.cursor()
+
+# Check if the "users" table exists
+query = "SHOW TABLES"
+cursor.execute(query)
+
+if "users" in cursor.fetchall():
+    print("Table 'users' already exists")
+else:
+    print("Table 'users' does not exist")
+```
+
+In this example, the SHOW TABLE statement is used to get a list of all the tables in the current database. The list of tables is then checked to see if the "users" table exists.
+
 ## Creating a Table
 
-To create a table in MySQL, use the "CREATE TABLE" statement.
-
-Make sure you define the name of the database when you create the connection
+After checking if the table exists, you can use the CREATE TABLE SQL statement to create a new table in the database. The CREATE TABLE statement specifies the name of the table and the columns and their data types in the table. Here is an example of creating a table:
 
 ```python
 import mysql.connector
 
-mydb = mysql.connector.connect(
-  host="localhost",
-  user="yourusername",
-  password="yourpassword",
-  database="mydatabase"
+# Connect to the MySQL server
+cnx = mysql.connector.connect(
+    host="localhost",
+    user="username",
+    password="password"
 )
 
-mycursor = mydb.cursor()
+# Create a cursor object for executing SQL queries
+cursor = cnx.cursor()
 
-mycursor.execute("CREATE TABLE customers (name VARCHAR(255), address VARCHAR(255))")
+# Check if the "users" table exists
+query = "SHOW TABLES"
+cursor.execute(query)
+
+if "users" in cursor.fetchall():
+    print("Table 'users' already exists")
+else:
+    # Create a new table with the name "users"
+    query = "CREATE TABLE users (
+        id INT NOT NULL AUTO_INCREMENT,
+        username VARCHAR(255) NOT NULL,
+        password VARCHAR(255) NOT NULL,
+        PRIMARY KEY (id)
+    )"
+    cursor.execute(query)
 ```
 
-## Check if the table exists
+In this example, the CREATE TABLE statement is used to create a new table with the name "users" only if the table does not already exist. The table has three columns: "id" (an integer), "username" (a string), and "password" (a string). The "id" column is set as the primary key, which means that it must be unique and non-null for each row in the table.
 
-You can check if a table exist by listing all tables in your database with the "SHOW TABLES" statement:
+## Primary Keys
 
-```python
+A primary key is a column or set of columns in a table that is used to identify each row in the table uniquely. A primarykey must be unique and non-null for each row in the table. In the example above, the "id" column is set as the primary key for the "users" table.
 
-import mysql.connector
-
-mydb = mysql.connector.connect(
-  host="localhost",
-  user="yourusername",
-  password="yourpassword",
-  database="mydatabase"
-)
-
-mycursor = mydb.cursor()
-
-mycursor.execute("SHOW TABLES")
-
-for x in mycursor:
-  print(x)
-```
-
-## Primary Key
-
-When creating a table, you should also create a column with a unique key for each record.
-
-This can be done by defining a PRIMARY KEY.
-
-We use the statement "INT AUTO\_INCREMENT PRIMARY KEY" which will insert a unique number for each record. Starting at 1, and increased by one for each record.
-
-Create a primary key when creating the table:
+To specify a primary key for a table in MySQL, you can use the PRIMARY KEY constraint in the CREATE TABLE statement. This constraint is used to specify the column or set of columns that make up the primary key for the table. Here is an example of creating a table with a primary key:
 
 ```python
 import mysql.connector
 
-mydb = mysql.connector.connect(
-  host="localhost",
-  user="yourusername",
-  password="yourpassword",
-  database="mydatabase"
+# Connect to the MySQL server
+cnx = mysql.connector.connect(
+    host="localhost",
+    user="username",
+    password="password"
 )
 
-mycursor = mydb.cursor()
+# Create a cursor object for executing SQL queries
+cursor = cnx.cursor()
 
-mycursor.execute("CREATE TABLE customers (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255), address VARCHAR(255))")
+# Check if the "users" table exists
+query = "SHOW TABLES"
+cursor.execute(query)
+
+if "users" in cursor.fetchall():
+    print("Table 'users' already exists")
+else:
+    # Create a new table with the name "users"
+    query = "CREATE TABLE users (
+        id INT NOT NULL AUTO_INCREMENT,
+        username VARCHAR(255) NOT NULL,
+        password VARCHAR(255) NOT NULL,
+        PRIMARY KEY (id)
+    )"
+    cursor.execute(query)
 ```
 
-If the table already exists, use the ALTER TABLE keyword:
+In this example, the PRIMARY KEY constraint is used to specify that the "id" column is the primary key for the "users" table.
 
-```python
-import mysql.connector
-
-mydb = mysql.connector.connect(
-  host="localhost",
-  user="yourusername",
-  password="yourpassword",
-  database="mydatabase"
-)
-
-mycursor = mydb.cursor()
-
-mycursor.execute("ALTER TABLE customers ADD COLUMN id INT AUTO_INCREMENT PRIMARY KEY")
-```
+In summary, to create tables in a database with MySQL and Python, you will need to connect to the database, create a cursor object, check if the table exists using the SHOW TABLES SQL statement, use the CREATE TABLE SQL statement to create a new table if it does not already exist, and specify a primary key using the PRIMARY KEY constraint in the CREATE TABLE statement.
 
 
 

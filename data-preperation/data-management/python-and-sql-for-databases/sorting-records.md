@@ -5,65 +5,54 @@
 Be sure to subscribe to stay up-to-date with new releases!
 {% endembed %}
 
-## Sort the Result
+To sort the records returned from a table in a database with MySQL and Python, you can use the ORDER BY clause in the SELECT SQL statement. This clause specifies the column or columns to be used for sorting the records and the sorting order (ascending or descending).
 
-To arrange the results in ascending or descending order, use the ORDER BY command.
-
-By default, the ORDER BY keyword arranges the results ascending. Use the DESC keyword to sort the results in descending order.
-
-Sort the result alphabetically by name: result:
+Here is an example of using the ORDER BY clause to sort the records returned from a table:
 
 ```python
-import mysql.connector
+Copy codeimport mysql.connector
 
-mydb = mysql.connector.connect(
-  host="localhost",
-  user="yourusername",
-  password="yourpassword",
-  database="mydatabase"
+# Connect to the MySQL server
+cnx = mysql.connector.connect(
+    host="localhost",
+    user="username",
+    password="password"
 )
 
-mycursor = mydb.cursor()
+# Create a cursor object for executing SQL queries
+cursor = cnx.cursor()
 
-sql = "SELECT * FROM customers ORDER BY name"
+# Select specific columns from the "users" table
+query = "SELECT * FROM users ORDER BY username ASC"
+cursor.execute(query)
 
-mycursor.execute(sql)
-
-myresult = mycursor.fetchall()
-
-for x in myresult:
-  print(x)
+# Print the rows returned from the query
+for row in cursor.fetchall():
+    print(row)
 ```
 
-## Order By DESC
+In this example, the SELECT statement is used to read from the "users" table and the ORDER BY clause is used to sort the records by the "username" column in ascending order. The rows returned from the query are then printed to the console.
 
-Use the `DESC` keyword to sort the result in a descending order.
-
-Sort the result reverse alphabetically by name:
+The ORDER BY clause can be used with the DESC keyword to sort the records in descending order. Here is an example of using the DESC keyword in the ORDER BY clause:
 
 ```python
-import mysql.connector
+Copy codeimport mysql.connector
 
-mydb = mysql.connector.connect(
-  host="localhost",
-  user="yourusername",
-  password="yourpassword",
-  database="mydatabase"
+# Connect to the MySQL server
+cnx = mysql.connector.connect(
+    host="localhost",
+    user="username",
+    password="password"
 )
 
-mycursor = mydb.cursor()
+# Create a cursor object for executing SQL queries
+cursor = cnx.cursor()
 
-sql = "SELECT * FROM customers ORDER BY name DESC"
-
-mycursor.execute(sql)
-
-myresult = mycursor.fetchall()
-
-for x in myresult:
-  print(x)
+# Select specific columns from the "users" table
+query
 ```
 
-
+In this example, the SELECT statement is used to read from the "users" table and the ORDER BY clause is used with the DESC keyword to sort the records by the "username" column in descending order. The rows returned from the query are then printed to the console.
 
 {% hint style="info" %}
 ### Want to learn more?
