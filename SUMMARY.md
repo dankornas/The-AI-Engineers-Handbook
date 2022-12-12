@@ -103,7 +103,7 @@
       * [Naive Bayes](ml-model-development/model-selection/supervised-learning/classification/naive-bayes.md)
       * [K-Nearest Neighbor](ml-model-development/model-selection/supervised-learning/classification/k-nearest-neighbor.md)
       * [Logistic Regression](ml-model-development/model-selection/supervised-learning/classification/logistic-regression.md)
-      * [Decision Trees](ml-model-development/model-selection/supervised-learning/classification/decision-trees/README.md)
+      * [Decision Trees](ml-model-development/model-selection/supervised-learning/classification/decision-trees.md)
         * [Using Decision Trees](ml-model-development/model-selection/supervised-learning/classification/decision-trees/using-decision-trees.md)
   * [Unsupervised Learning](ml-model-development/model-selection/unsupervised-learning/README.md)
     * [Association Rule Learning](ml-model-development/model-selection/unsupervised-learning/association-rule-learning/README.md)
