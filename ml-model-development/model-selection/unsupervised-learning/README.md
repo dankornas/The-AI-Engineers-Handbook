@@ -1,3 +1,2 @@
 # Unsupervised Learning
 
-Unsupervised learning is a type of machine learning where the algorithm is trained on a dataset without labels or any other kind of supervision. In other words, the algorithm is not told what the correct output should be for a given input, but is instead left to discover patterns and relationships in the data on its own. This can be useful for a variety of tasks, such as clustering data into groups based on their similarities, or identifying anomalous data points that don't fit with the rest of the dataset. Because unsupervised learning algorithms must learn from the data without guidance, they can be more challenging to train and require large amounts of data to be effective.
