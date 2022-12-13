@@ -110,29 +110,3 @@ This involves using monitoring tools, such as Prometheus or Datadog, to track th
 
 #### Example
 
-Here is an example of how you might use Prometheus to monitor the performance of a deployed machine learning model:
-
-```python
-# Install the Prometheus Python client library
-pip install prometheus_client
-
-# Import the Prometheus client library
-from prometheus_client import Summary, Counter, Histogram
-
-# Create metrics for tracking model performance
-model_request_latency = Histogram('model_request_latency_seconds', 'Model request latency')
-model_prediction_errors = Counter('model_prediction_errors', 'Model prediction errors')
-
-# Decorate the model prediction function with metrics
-@model_request_latency.time()
-@model_prediction_errors.count_exceptions()
-def predict(inputs):
-    # Make a prediction using the model
-    return model.predict(inputs)
-```
-
-In this example, the `prometheus_client` library is used to create Prometheus metrics for tracking the performance of a machine learning model. The `model_request_latency` metric is a histogram that tracks the latency of model prediction requests, and the `model_prediction_errors` metric is a counter that tracks the number of errors that occur when making predictions with the model.
-
-The `predict` function, which uses the model to make predictions on new input data, is decorated with the `model_request_latency.time` and `model_prediction_errors.count_exceptions` functions. This automatically records the latency and any exceptions that occur when the `predict` function is called, and updates the Prometheus metrics accordingly.
-
-By exposing these metrics to Prometheus, you can monitor the performance of the model in real time, and use the metrics to detect changes in performance or accuracy, and to take action to improve or update the model.
