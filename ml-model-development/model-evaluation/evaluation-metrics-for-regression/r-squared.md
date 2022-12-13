@@ -10,8 +10,8 @@ To calculate R-squared, we first need to calculate the squared differences betwe
 
 Here is a short code example of how to calculate R-squared in Python:
 
-```python
-import numpy as np
+```makefile
+Copy codeimport numpy as np
 
 # define the predicted values
 predicted = [3, 4, 5, 6]

@@ -9,7 +9,7 @@ To calculate precision, we need to first determine the true positive predictions
 Here is a short code example of how to calculate precision in Python:
 
 ```python
-# define the true positive predictions
+Copy code# define the true positive predictions
 true_positives = [3, 4, 5]
 
 # define the false positive predictions
