@@ -1,73 +1,40 @@
 # Write/Create FIles
 
-***
+To write to a file with Python, you will first need to open the file using the open() function. This function takes the file path and the access mode as arguments, and returns a file object.
 
-### Write to an Existing File
-
-To write to an existing file, you must add a parameter to the `open()` function:
-
-`"a"` - Append - will append to the end of the file
-
-`"w"` - Write - will overwrite any existing content
-
-
-
-Open the file "demofile2.txt" and append content to the file:
+To open a file for writing, you will use the 'w' access mode. Here is an example of opening a file for writing:
 
 ```python
-f = open("demofile2.txt", "a")
-f.write("Now the file has more content!")
-f.close()
-
-#open and read the file after the appending:
-f = open("demofile2.txt", "r")
-print(f.read())
+file = open('my_file.txt', 'w')
 ```
 
-Open the file "demofile3.txt" and overwrite the content:
+Once the file is opened, you can use the write() method to write to the file. The write() method takes a string as an argument and writes it to the file. Here is an example of using the write() method:
 
 ```python
-f = open("demofile3.txt", "w")
-f.write("Woops! I have deleted the content!")
-f.close()
-
-#open and read the file after the appending:
-f = open("demofile3.txt", "r")
-print(f.read())
+file = open('my_file.txt', 'w')
+file.write('Hello World')
 ```
 
-**Note:** the "w" method will overwrite the entire file.
+In this example, the string 'Hello World' is written to the file.
 
-***
-
-### Create a New File
-
-To create a new file in Python, use the `open()` method, with one of the following parameters:
-
-`"x"` - Create - will create a file, returns an error if the file exist
-
-`"a"` - Append - will create a file if the specified file does not exist
-
-`"w"` - Write - will create a file if the specified file does not exist
-
-
-
-Create a file called "myfile.txt":
+If you want to create a new file, you can use the 'x' access mode instead of the 'w' access mode. This mode will create a new file if it does not already exist, and will raise an error if the file already exists. Here is an example of using the 'x' access mode:
 
 ```python
-f = open("myfile.txt", "x")
+file = open('my_file.txt', 'x')
 ```
 
-
-
-Create a new file if it does not exist:
+After you are finished writing to the file, it is important to close the file using the close() method. This method frees up resources and ensures that any changes made to the file are saved. Here is an example of closing a file:
 
 ```python
-/f = open("myfile.txt", "w")
+file = open('my_file.txt', 'w')
+file.write('Hello World')
+file.close()
 ```
 
+In this example, the file is opened, written to, and then closed using the close() method.
 
+In summary, to write to a file with Python you need to:
 
-***
-
-\
+1. Open the file using the open() function
+2. Write to the file using the write() method
+3. Close the file using the close() method

@@ -6,8 +6,8 @@ To calculate the mean squared error, the squared differences between the predict
 
 Here is an example of how to calculate the mean squared error for a set of predictions:
 
-```scss
-Copy codetrue_values = [10, 15, 20, 25, 30]
+```python
+true_values = [10, 15, 20, 25, 30]
 predicted_values = [8, 18, 19, 26, 32]
 
 squared_errors = [(true - predicted)**2 for true, predicted in zip(true_values, predicted_values)]

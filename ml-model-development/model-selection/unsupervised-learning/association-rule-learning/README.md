@@ -1,2 +1,3 @@
 # Association Rule Learning
 
+Association rule learning is a type of unsupervised machine learning algorithm that is used to identify relationships between variables in a dataset. It is often used in market basket analysis, where the goal is to identify items that are frequently purchased together in order to provide recommendations to customers. For example, if the algorithm finds that people who purchase bread also frequently purchase milk, it might recommend milk to customers who are buying bread. Association rule learning algorithms typically use a measure called support to determine how often items are purchased together, and a measure called confidence to determine how often the rule holds true.

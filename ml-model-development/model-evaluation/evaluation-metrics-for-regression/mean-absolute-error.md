@@ -6,8 +6,8 @@ To calculate the mean absolute error, the absolute differences between the predi
 
 Here is an example of how to calculate the mean absolute error for a set of predictions:
 
-```scss
-Copy codetrue_values = [10, 15, 20, 25, 30]
+```python
+true_values = [10, 15, 20, 25, 30]
 predicted_values = [8, 18, 19, 26, 32]
 
 absolute_errors = [abs(true - predicted) for true, predicted in zip(true_values, predicted_values)]

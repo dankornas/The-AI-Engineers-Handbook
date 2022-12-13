@@ -24,7 +24,7 @@ In general, a model with a high lift value is considered to be effective in iden
 Here is an example of how you might calculate the lift of a classification model in Python:
 
 ```python
-Copy codeimport numpy as np
+import numpy as np
 
 # Calculate the lift
 y_true = [0, 1, 1, 0, 1, 0]
