@@ -159,8 +159,8 @@
   * [DVC](ml-model-maintenance/tools/dvc.md)
   * [Prometheus](ml-model-maintenance/tools/prometheus.md)
   * [MLFlow](ml-model-maintenance/tools/mlflow.md)
-  * [Docker](ml-model-maintenance/tools/docker.md)
-  * [Kubernetes](ml-model-maintenance/tools/kubernetes.md)
+  * [Docker](ml-model-deployment/docker.md)
+  * [Kubernetes](ml-model-deployment/kubernetes.md)
 * [The Cloud](ml-model-deployment/the-cloud.md)
 
 ## ML Model Maintenance
