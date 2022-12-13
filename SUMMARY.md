@@ -152,17 +152,19 @@
 ## ML Model Maintenance
 
 * [Overview](ml-model-maintenance/overview.md)
-* [Model Serving & Deployment](ml-model-maintenance/model-serving.md)
+* [Model Serving & Deployment](ml-model-deployment/model-serving.md)
 * [Model Versioning & Management](ml-model-maintenance/model-versioning-and-management.md)
-* [Docker](ml-model-maintenance/docker.md)
-* [Kubernetes](ml-model-maintenance/kubernetes.md)
-* [The Cloud](ml-model-maintenance/the-cloud.md)
+* [Model Monitoring and Evaluation](ml-model-maintenance/model-monitoring-and-evaluation.md)
+* [Model Maintenance and Updates](ml-model-maintenance/model-maintenance-and-updates.md)
+* [Docker](ml-model-deployment/docker.md)
+* [Kubernetes](ml-model-deployment/kubernetes.md)
+* [The Cloud](ml-model-deployment/the-cloud.md)
 
 ## ML Model Maintenance
 
-* [Maintenance](ml-model-maintenance-1/maintenance.md)
-* [Monitoring](ml-model-maintenance-1/monitoring.md)
-* [MLOps](ml-model-maintenance-1/mlops.md)
+* [Maintenance](ml-model-maintenance/maintenance.md)
+* [Monitoring](ml-model-maintenance/monitoring.md)
+* [MLOps](ml-model-maintenance/mlops.md)
 
 ## Learn More
 
