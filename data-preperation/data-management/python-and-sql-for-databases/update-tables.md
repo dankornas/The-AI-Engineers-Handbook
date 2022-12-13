@@ -7,32 +7,30 @@ Be sure to subscribe to stay up-to-date with new releases!
 
 ## Update Table
 
-To update records in a table in a database with MySQL and Python, you can use the UPDATE SQL statement. This statement specifies the table to be updated, the columns to be updated, and the new values for the columns. It also specifies the conditions for selecting the records to be updated.
+You can update existing records in a table by using the "UPDATE" statement.
 
-Here is an example of using the UPDATE SQL statement to update records in a table:
+Overwrite the address column from "Valley 345" to "Canyon 123":
 
 ```python
-Copy codeimport mysql.connector
+import mysql.connector
 
-# Connect to the MySQL server
-cnx = mysql.connector.connect(
-    host="localhost",
-    user="username",
-    password="password"
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="yourusername",
+  password="yourpassword",
+  database="mydatabase"
 )
 
-# Create a cursor object for executing SQL queries
-cursor = cnx.cursor()
+mycursor = mydb.cursor()
 
-# Update the "username" and "password" columns in the "users" table
-query = "UPDATE users SET username = 'user2', password = 'password2' WHERE username = 'user1'"
-cursor.execute(query)
+sql = "UPDATE customers SET address = 'Canyon 123' WHERE address = 'Valley 345'"
 
-# Save the changes
-cnx.commit()
+mycursor.execute(sql)
+
+mydb.commit()
+
+print(mycursor.rowcount, "record(s) affected")
 ```
-
-In this example, the UPDATE statement is used to update the "username" and "password" columns in the "users" table. The new values for the columns are "user2" and "password2", and the records to be updated are selected using the WHERE clause. The changes are then saved using the cnx.commit() method.
 
 ## Prevent SQL Injection
 

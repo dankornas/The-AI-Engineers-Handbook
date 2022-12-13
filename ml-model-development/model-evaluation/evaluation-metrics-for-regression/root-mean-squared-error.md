@@ -1,17 +1,11 @@
 # Root Mean Squared Error
 
-The root mean squared error (RMSE) is a measure of the difference between a model's predictions and the true values in the data. It is commonly used as a metric to evaluate the performance of a regression model, and is defined as the square root of the average of the squared differences between the predictions and the true values.
+The metric root mean squared error (RMSE) is a measure of how well a model fits a set of data. It is calculated by taking the square root of the average of the squared differences between the predicted values and the actual values. This metric is commonly used in regression tasks, where the goal is to predict a continuous value.
 
-```python
-import numpy as np
+The RMSE is a measure of the magnitude of the error, which is important for understanding how well the model is performing. A low RMSE indicates that the model is making accurate predictions, while a high RMSE indicates that the model is not making accurate predictions.
 
-# Calculate the RMSE
-y_true = [100, 50, 30, 20]
-y_pred = [90, 50, 50, 30]
-rmse = np.sqrt(np.mean((np.array(y_true) - np.array(y_pred))**2))
+To calculate the RMSE, we first need to calculate the squared differences between the predicted values and the actual values. This can be done by taking the difference between each predicted value and the corresponding actual value, and then squaring that difference. Then, we take the average of all of these squared differences, and finally take the square root of that average to get the RMSE.
 
-# Print the RMSE
-print("RMSE:", rmse)
-```
+For example, if a model predicts the values 3, 4, 5, and 6, and the actual values are 2, 4, 6, and 8, then the squared differences would be 1, 0, 1, and 4. The average of these squared differences is 2, and the square root of 2 is 1.4142. So, the RMSE for this model would be 1.4142.
 
-The RMSE is a measure of the average magnitude of the errors in a model's predictions, and is often used to compare the performance of different models. A lower RMSE indicates a better fit and more accurate predictions.
+Overall, the RMSE is a useful metric for evaluating the performance of a machine learning model and for comparing the performance of different models. It can help us determine whether a model is making accurate predictions and can help us identify areas where the model needs improvement.

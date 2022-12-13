@@ -5,46 +5,61 @@
 Be sure to subscribe to stay up-to-date with new releases!
 {% endembed %}
 
-MySQL is a popular open-source relational database management system (RDBMS) used for storing and managing data. It is widely used in web applications and other applications that require data storage and management.
+Python can be used in database applications.
 
-Python is a powerful and versatile programming language that can be used for a wide range of tasks, including data analysis and machine learning. It provides a number of libraries and modules for interacting with databases, including the MySQL Connector for Python.
+One of the most popular databases is MySQL.
 
-The MySQL Connector for Python is a Python driver for communicating with MySQL servers. It allows you to connect to a MySQL server from a Python script and perform various operations on the database, such as creating tables, inserting and updating data, and running SQL queries.
+### MySQL Database
 
-To use the MySQL Connector for Python, you will need to install it on your system. You can install it using pip, the Python package manager, by running the following command:
+To be able to experiment with the code examples in this tutorial, you should have MySQL installed on your computer.
 
-```python
-pip install mysql-connector-python
+You can download a free MySQL database at [https://www.mysql.com/downloads/](https://www.mysql.com/downloads/).
+
+### Install MySQL Driver
+
+Python needs a MySQL driver to access the MySQL database, which can be installed using PIP to install "MySQL Connector".
+
+PIP is most likely already installed in your Python environment.
+
+Navigate your command line to the location of PIP, and type the following:
+
+```
+C:\Users\Your Name\AppData\Local\Programs\Python\Python36-32\Scripts>python -m pip install mysql-connector-python
 ```
 
-Once the MySQL Connector for Python is installed, you can use it to connect to a MySQL server and perform operations on the database. Here is an example of connecting to a MySQL server and running a simple SQL query:
+Now you have downloaded and installed a MySQL driver.
+
+### Test MySQL Connector
+
+To test if the installation was successful, or if you already have "MySQL Connector" installed, create a Python page with the following content:
 
 ```python
 import mysql.connector
-
-# Connect to the MySQL server
-cnx = mysql.connector.connect(
-    host="localhost",
-    user="username",
-    password="password"
-)
-
-# Create a cursor object for executing SQL queries
-cursor = cnx.cursor()
-
-# Execute a SQL query to select all rows from the "users" table
-query = "SELECT * FROM users"
-cursor.execute(query)
-
-# Print the result of the SQL query
-print(cursor.fetchall())
-
-# Close the cursor and connection
-cursor.close()
-cnx.close()
 ```
 
-In this example, the MySQL Connector for Python is imported and used to connect to a MySQL server. A cursor object is then created for executing SQL queries
+If the above code was executed with no errors, "MySQL Connector" is installed and ready to be used.
+
+### Create Connection
+
+Start by creating a connection to the database.
+
+Use the username and password from your MySQL database.
+
+{% code title="demo_mysql_connection.py" %}
+```python
+import mysql.connector
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="yourusername",
+  password="yourpassword"
+)
+print(mydb)
+```
+{% endcode %}
+
+
+
+Now you can start querying the database using SQL statements.
 
 
 
