@@ -1,2 +1,3 @@
 # Clustering
 
+Clustering is a type of unsupervised machine learning algorithm that is used to group data points into clusters based on their similarity. The goal of clustering is to identify natural groupings in the data, such that data points in the same cluster are more similar to each other than they are to data points in other clusters. This can be useful for a variety of tasks, such as data compression, anomaly detection, or finding groups of similar customers in a dataset. There are many different clustering algorithms, but they all work by iteratively assigning data points to clusters and then adjusting the clusters based on the data points that are assigned to them. The end result is a set of clusters that represent the natural groupings in the data.

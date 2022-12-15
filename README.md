@@ -6,24 +6,18 @@ coverY: 0
 
 # Welcome to the Journey
 
-Welcome to the Machine Learning Challenge!
+The AI Engineer's Handbook is a comprehensive guide to the field of AI engineering, covering the fundamental concepts, tools, and techniques used in the design, development, and deployment of AI systems.
 
-I have received a lot of interest in my recent Twitter post about crushing the second half of the year by learning Machine Learning and breaking it down the topics to learn each month:
+Written for both experienced AI engineers and those new to the field, the Handbook provides a detailed overview of the key topics and technologies used in AI engineering, including machine learning, natural language processing, computer vision, and more.
 
-{% embed url="https://twitter.com/DanKornas/status/1543867356702720003?s=20&t=gkNNyBRjDR_uUeoOAW5Yxg" %}
-
-Because a lot of you have been asking for my guidance, I have decided to create a quick guide and break down each topic of each month into particular days.
-
-And because there is tons of information on the internet, you have to just pick one and just start! So, I will be providing learning material straight from the internet FOR FREE!&#x20;
-
-This quick guide is here to help you start your journey as a Machine Learning Engineer.&#x20;
+With practical examples and code samples throughout, the Handbook is an essential resource for anyone looking to learn more about AI engineering, and to gain the skills and knowledge needed to start working with AI systems.
 
 {% hint style="info" %}
 **DISCLAIMER**
 
-You will not become a Machine Learning Master after these 6 months. This guide is to help you learn at least the fundamentals that are needed to become a Machine Learning Engineer.&#x20;
+You will not become a AI Master for this book. This guide is to help you learn at least the fundamentals that are needed to become a Machine Learning Engineer, Data Scientist or AI Engineer.&#x20;
 
-However, after going through this six month process, you will have the knowledge to:
+However, after going through this book, you will have the knowledge to:
 
 * start working on your own projects
 * move on to more advanced topics

@@ -7,142 +7,93 @@ Be sure to subscribe to stay up-to-date with new releases!
 
 ## Join Two or More Tables
 
-You can combine rows from two or more tables, based on a related column between them, by using a JOIN statement.
+To join two or more tables in a database with MySQL and Python, you can use the JOIN clause in the SELECT SQL statement. This clause specifies the tables to be joined and the columns that are used for matching records in the tables.
 
-Consider you have a "users" table and a "products" table:
-
-{% code title="users table" %}
-```
-{ id: 1, name: 'John', fav: 154},
-{ id: 2, name: 'Peter', fav: 154},
-{ id: 3, name: 'Amy', fav: 155},
-{ id: 4, name: 'Hannah', fav:},
-{ id: 5, name: 'Michael', fav:}
-```
-{% endcode %}
-
-{% code title="products table" %}
-```
-{ id: 154, name: 'Chocolate Heaven' },
-{ id: 155, name: 'Tasty Lemons' },
-{ id: 156, name: 'Vanilla Dreams' }
-```
-{% endcode %}
-
-These two tables can be combined by using users' `fav` field and products' `id` field.
-
-Join users and products to see the name of the users favorite product:
+Here is an example of using the JOIN clause to join two tables:
 
 ```python
 import mysql.connector
 
-mydb = mysql.connector.connect(
-  host="localhost",
-  user="yourusername",
-  password="yourpassword",
-  database="mydatabase"
+# Connect to the MySQL server
+cnx = mysql.connector.connect(
+    host="localhost",
+    user="username",
+    password="password"
 )
 
-mycursor = mydb.cursor()
+# Create a cursor object for executing SQL queries
+cursor = cnx.cursor()
 
-sql = "SELECT \
-  users.name AS user, \
-  products.name AS favorite \
-  FROM users \
-  INNER JOIN products ON users.fav = products.id"
+# Join the "users" and "posts" tables
+query = "SELECT u.username, p.title FROM users AS u INNER JOIN posts AS p ON u.id = p.user_id"
+cursor.execute(query)
 
-mycursor.execute(sql)
-
-myresult = mycursor.fetchall()
-
-for x in myresult:
-  print(x)
-
-### RESULT ###
-# ('John', 'Chocolate Heaven')
-# ('Peter', 'Chocolate Heaven')
-# ('Amy', 'Tasty Lemon')
+# Print the rows returned from the query
+for row in cursor.fetchall():
+    print(row)
 ```
 
-You can use JOIN instead of INNER JOIN. They will both give you the same result.
+In this example, the SELECT statement is used to join the "users" and "posts" tables. The JOIN clause is used to specify the tables to be joined (users and posts) and the columns that are used for matching records in the tables (id and user\_id). The rows returned from the query are then printed to the console.
 
 ## LEFT JOIN
 
-Hannah and Michael were excluded from the result in the preceding example because INNER JOIN only displays data when there is a match.
+To use a left join to join two tables in a database with MySQL and Python, you can use the LEFT JOIN keyword in the JOIN clause of the SELECT SQL statement. This keyword specifies that all the records from the left table (the first table specified in the FROM clause) will be included in the result set, even if there are no matching records in the right table (the second table specified in the FROM clause).
 
-Use the LEFT JOIN statement to show all users, even if they don't have a favorite product.
+Here is an example of using a left join to join two tables:
 
-Select all users and their favorite product:
+```python
+import mysql.connector
 
-<pre class="language-python"><code class="lang-python">import mysql.connector
-
-mydb = mysql.connector.connect(
-  host="localhost",
-  user="myusername",
-  password="mypassword",
-  database="mydatabase"
+# Connect to the MySQL server
+cnx = mysql.connector.connect(
+    host="localhost",
+    user="username",
+    password="password"
 )
 
-mycursor = mydb.cursor()
+# Create a cursor object for executing SQL queries
+cursor = cnx.cursor()
 
-sql = "SELECT \
-  users.name AS user, \
-  products.name AS favorite \
-  FROM users \
-  LEFT JOIN products ON users.fav = products.id"
+# Join the "users" and "posts" tables using a left join
+query = "SELECT u.username, p.title FROM users AS u LEFT JOIN posts AS p ON u.id = p.user_id"
+cursor.execute(query)
 
-mycursor.execute(sql)
+# Print the rows returned from the query
+for row in cursor.fetchall():
+    print(row)
+```
 
-myresult = mycursor.fetchall()
-
-for x in myresult:
-  print(x)
-
-  
-### RESULT ###
-<strong># ('John', 'Chocolate Heaven')
-</strong># ('Peter', 'Chocolate Heaven')
-# ('Amy', 'Tasty Lemon')
-# ('Hannah', None)
-# ('Michael', None)</code></pre>
+In this example, the SELECT statement is used to join the "users" and "posts" tables using a left join. The LEFT JOIN keyword is used to specify that all the records from the "users" table will be included in the result set, even if there are no matching records in the "posts" table. The rows returned from the query are then printed to the console.
 
 ## RIGHT JOIN
 
-Use the RIGHT JOIN statement to return all items and people who have them as their favorite, even if no user has them as their favorite.
+To use a right join to join two tables in a database with MySQL and Python, you can use the RIGHT JOIN keyword in the JOIN clause of the SELECT SQL statement. This keyword specifies that all the records from the right table (the second table specified in the FROM clause) will be included in the result set, even if there are no matching records in the left table (the first table specified in the FROM clause).
 
-Select all products, and the user(s) who have them as their favorite:
+Here is an example of using a right join to join two tables:
 
-<pre class="language-python"><code class="lang-python">import mysql.connector
+```python
+Copy codeimport mysql.connector
 
-mydb = mysql.connector.connect(
-  host="localhost",
-  user="myusername",
-  password="mypassword",
-  database="mydatabase"
+# Connect to the MySQL server
+cnx = mysql.connector.connect(
+    host="localhost",
+    user="username",
+    password="password"
 )
 
-mycursor = mydb.cursor()
+# Create a cursor object for executing SQL queries
+cursor = cnx.cursor()
 
-sql = "SELECT \
-  users.name AS user, \
-  products.name AS favorite \
-  FROM users \
-  RIGHT JOIN products ON users.fav = products.id"
+# Join the "users" and "posts" tables using a right join
+query = "SELECT u.username, p.title FROM users AS u RIGHT JOIN posts AS p ON u.id = p.user_id"
+cursor.execute(query)
 
-mycursor.execute(sql)
+# Print the rows returned from the query
+for row in cursor.fetchall():
+    print(row)
+```
 
-myresult = mycursor.fetchall()
-
-for x in myresult:
-  print(x)
-
-### RESULT ###
-# ('John', 'Chocolate Heaven')
-<strong># ('Peter', 'Chocolate Heaven')
-</strong># ('Amy', 'Tasty Lemon')
-# (None, 'Vanilla Dreams')</code></pre>
-
-
+In this example, the SELECT statement is used to join the "users" and "posts" tables using a right join. The RIGHT JOIN keyword is used to specify that all the records from the "posts" table will be included in the result set, even if there are no matching records in the "users" table. The rows returned from the query are then printed to the console.
 
 {% hint style="info" %}
 ### Want to learn more?

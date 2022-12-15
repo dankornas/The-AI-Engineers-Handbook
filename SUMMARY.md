@@ -8,7 +8,6 @@
 
 ## Programming Skills
 
-* [Version Control with Git](programming-skills/version-control-with-git.md)
 * [Python Programming](programming-skills/python-programming/README.md)
   * [Data Types](programming-skills/python-programming/data-types.md)
   * [Strings](programming-skills/python-programming/strings.md)
@@ -25,7 +24,7 @@
     * [Classes and Objects](programming-skills/python-programming/object-oriented-programming/classes-and-objects.md)
     * [Inheritance](programming-skills/python-programming/object-oriented-programming/inheritance.md)
 * [Bash](programming-skills/bash.md)
-* [The Challenge](programming-skills/the-challenge.md)
+* [Version Control with Git](programming-skills/version-control-with-git.md)
 
 ## Data Preperation
 
@@ -161,13 +160,6 @@
   * [MLFlow](ml-model-maintenance/tools/mlflow.md)
   * [Docker](ml-model-deployment/docker.md)
   * [Kubernetes](ml-model-deployment/kubernetes.md)
-* [The Cloud](ml-model-deployment/the-cloud.md)
-
-## ML Model Maintenance
-
-* [Maintenance](ml-model-maintenance/maintenance.md)
-* [Monitoring](ml-model-maintenance/monitoring.md)
-* [MLOps](ml-model-maintenance/mlops.md)
 
 ## Learn More
 

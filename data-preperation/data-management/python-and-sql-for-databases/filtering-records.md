@@ -7,61 +7,87 @@ Be sure to subscribe to stay up-to-date with new releases!
 
 ## Select With a Filter
 
-When selecting records from a table, you can filter the selection by using the "WHERE" statement:
-
-Select record(s) where the address is "Park Lane 38": result:
+To filter the records returned from a table in a database with MySQL and Python, you can use the WHERE clause in the SELECT SQL statement. This clause specifies the conditions that must be met for the records to be returned from the table. Here is an example of using the WHERE clause to filter the records returned from a table:
 
 ```python
 import mysql.connector
 
-mydb = mysql.connector.connect(
-  host="localhost",
-  user="yourusername",
-  password="yourpassword",
-  database="mydatabase"
+# Connect to the MySQL server
+cnx = mysql.connector.connect(
+    host="localhost",
+    user="username",
+    password="password"
 )
 
-mycursor = mydb.cursor()
+# Create a cursor object for executing SQL queries
+cursor = cnx.cursor()
 
-sql = "SELECT * FROM customers WHERE address ='Park Lane 38'"
+# Select specific columns from the "users" table
+query = "SELECT * FROM users WHERE username = 'user1'"
+cursor.execute(query)
 
-mycursor.execute(sql)
-
-myresult = mycursor.fetchall()
-
-for x in myresult:
-  print(x)
+# Print the rows returned from the query
+for row in cursor.fetchall():
+    print(row)
 ```
+
+In this example, the SELECT statement is used to read from the "users" table and the WHERE clause is used to filter the records by the "username" column. Only records with a "username" value of "user1" will be returned from the table. The rows returned from the query are then printed to the console.
+
+The WHERE clause can be used with various comparison operators, such as =, >, <, >=, <=, etc., to specify the conditions for filtering the records. You can also use the AND and OR keywords to combine multiple conditions in the WHERE clause. Here is an example of using multiple conditions in the WHERE clause:
+
+```python
+import mysql.connector
+
+# Connect to the MySQL server
+cnx = mysql.connector.connect(
+    host="localhost",
+    user="username",
+    password="password"
+)
+
+# Create a cursor object for executing SQL queries
+cursor = cnx.cursor()
+
+# Select specific columns from the "users" table
+query = "SELECT * FROM users WHERE username = 'user1' AND password = 'password1'"
+cursor.execute(query)
+
+# Print the rows returned from the query
+for row in cursor.fetchall():
+    print(row)
+```
+
+In this example, the SELECT statement is used to read from the "users" table and the WHERE clause is used to filter the records by the "username" and "password" columns. Only records with a "username" value of "user1" and a "password" value of "password1" will be returned from the table. The rows returned from the query are then printed to the console.
 
 ## Wildcard Characters
 
-You can also select the records that starts, includes, or ends with a given letter or phrase.
+To use wildcard characters in the WHERE clause of the SELECT SQL statement in a database with MySQL and Python, you can use the % character to match any string of zero or more characters. This character can be used in the middle, at the beginning, or at the end of the string to be matched.
 
-Use the `%`  to represent wildcard characters.
-
-Select records where the address contains the word "way":
+Here is an example of using the % wildcard character in the WHERE clause:
 
 ```python
 import mysql.connector
 
-mydb = mysql.connector.connect(
-  host="localhost",
-  user="yourusername",
-  password="yourpassword",
-  database="mydatabase"
+# Connect to the MySQL server
+cnx = mysql.connector.connect(
+    host="localhost",
+    user="username",
+    password="password"
 )
 
-mycursor = mydb.cursor()
+# Create a cursor object for executing SQL queries
+cursor = cnx.cursor()
 
-sql = "SELECT * FROM customers WHERE address LIKE '%way%'"
+# Select specific columns from the "users" table
+query = "SELECT * FROM users WHERE username LIKE '%user%'"
+cursor.execute(query)
 
-mycursor.execute(sql)
-
-myresult = mycursor.fetchall()
-
-for x in myresult:
-  print(x)
+# Print the rows returned from the query
+for row in cursor.fetchall():
+    print(row)
 ```
+
+In this example, the % wildcard character is used to match any "username" value that contains the string "user". The rows returned from the query are then printed to the console.
 
 ## Prevent SQL Injection
 
