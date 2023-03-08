@@ -1,149 +1,94 @@
 # Joining Arrays
 
-***
+### Joining arrays
 
-### Joining NumPy Arrays
+Joining arrays in NumPy refers to combining two or more arrays into a single array. There are several ways to join arrays in NumPy, including concatenation, stacking, and hstack and vstack functions.
 
-Joining means putting contents of two or more arrays in a single array.
+### Joining Numpy Arrays
 
-In SQL we join tables based on a key, whereas in NumPy we join arrays by axes.
+To join two or more arrays in NumPy, we can use the `concatenate()` function. This function takes a sequence of arrays along with an optional axis parameter that specifies the axis along which the arrays will be joined.
 
-We pass a sequence of arrays that we want to join to the `concatenate()` function, along with the axis. If axis is not explicitly passed, it is taken as 0.
-
-#### Example
-
-Join two arrays
-
-import numpy as np
-
-arr1 = np.array(\[1, 2, 3])
-
-arr2 = np.array(\[4, 5, 6])
-
+```python
+# Joining two arrays
+arr1 = np.array([1, 2, 3])
+arr2 = np.array([4, 5, 6])
 arr = np.concatenate((arr1, arr2))
-
 print(arr)
+```
 
-Try it Yourself »
+Output:
 
-#### Example
+```csharp
+[1 2 3 4 5 6]
+```
 
-Join two 2-D arrays along rows (axis=1):
-
-import numpy as np
-
-arr1 = np.array(\[\[1, 2], \[3, 4]])
-
-arr2 = np.array(\[\[5, 6], \[7, 8]])
-
-arr = np.concatenate((arr1, arr2), axis=1)
-
-print(arr)
-
-Try it Yourself »
-
-***
+In this example, we first create two 1D arrays `arr1` and `arr2`, and then join them using the `concatenate()` function.
 
 ### Joining Arrays Using Stack Functions
 
-Stacking is same as concatenation, the only difference is that stacking is done along a new axis.
+NumPy provides several stack functions that allow us to join arrays along different axes.
 
-We can concatenate two 1-D arrays along the second axis which would result in putting them one over the other, ie. stacking.
+### **Stacking Along Rows**
 
-We pass a sequence of arrays that we want to join to the `stack()` method along with the axis. If axis is not explicitly passed it is taken as 0.
+To stack arrays along rows, we can use the `hstack()` function. This function takes a sequence of arrays and stacks them horizontally.
 
-#### Example
-
-import numpy as np
-
-arr1 = np.array(\[1, 2, 3])
-
-arr2 = np.array(\[4, 5, 6])
-
-arr = np.stack((arr1, arr2), axis=1)
-
-print(arr)
-
-Try it Yourself »
-
-***
-
-***
-
-### Stacking Along Rows
-
-NumPy provides a helper function: `hstack()` to stack along rows.
-
-#### Example
-
-import numpy as np
-
-arr1 = np.array(\[1, 2, 3])
-
-arr2 = np.array(\[4, 5, 6])
-
-arr = np.hstack((arr1, arr2))
-
-print(arr)
-
-Try it Yourself »
-
-***
-
-### Stacking Along Columns
-
-NumPy provides a helper function: `vstack()` to stack along columns.
-
-#### Example
-
-import numpy as np
-
-arr1 = np.array(\[1, 2, 3])
-
-arr2 = np.array(\[4, 5, 6])
-
-arr = np.vstack((arr1, arr2))
-
-print(arr)
-
-Try it Yourself »
-
-***
-
-### Stacking Along Height (depth)
-
-NumPy provides a helper function: `dstack()` to stack along height, which is the same as depth.
-
-#### Example
-
-import numpy as np
-
-arr1 = np.array(\[1, 2, 3])
-
-arr2 = np.array(\[4, 5, 6])
-
-arr = np.dstack((arr1, arr2))
-
-print(arr)
-
-Try it Yourself »
-
-***
-
-### Test Yourself With Exercises
-
-### Exercise:
-
-Use a correct NumPy method to join two arrays into a single array.
-
-```
+```python
+# Stacking along rows
 arr1 = np.array([1, 2, 3])
-
 arr2 = np.array([4, 5, 6])
-
-arr = np.((arr1, arr2))
+arr = np.hstack((arr1, arr2))
+print(arr)
 ```
 
-Start the Exercise
+Output:
 
-\
+```csharp
+[1 2 3 4 5 6]
+```
+
+In this example, we first create two 1D arrays `arr1` and `arr2`, and then stack them horizontally using the `hstack()` function.
+
+### **Stacking Along Columns**
+
+To stack arrays along columns, we can use the `vstack()` function. This function takes a sequence of arrays and stacks them vertically.
+
+```python
+# Stacking along columns
+arr1 = np.array([1, 2, 3])
+arr2 = np.array([4, 5, 6])
+arr = np.vstack((arr1, arr2))
+print(arr)
+```
+
+Output:
+
+```lua
+[[1 2 3]
+ [4 5 6]]
+```
+
+In this example, we first create two 1D arrays `arr1` and `arr2`, and then stack them vertically using the `vstack()` function.
+
+### **Stacking Along Height (depth)**
+
+To stack arrays along the third axis, we can use the `dstack()` function. This function takes a sequence of arrays and stacks them depth-wise.
+
+```python
+# Stacking along height (depth)
+arr1 = np.array([1, 2, 3])
+arr2 = np.array([4, 5, 6])
+arr = np.dstack((arr1, arr2))
+print(arr)
+```
+
+Output:
+
+```lua
+[[[1 4]
+  [2 5]
+  [3 6]]]
+```
+
+In this example, we first create two 1D arrays `arr1` and `arr2`, and then stack them along the third axis using the `dstack()` function.
+
+In summary, joining arrays in NumPy can be accomplished using various methods, including concatenation, stacking, hstack and vstack functions. By using these functions, we can combine arrays in different ways depending on the desired output.

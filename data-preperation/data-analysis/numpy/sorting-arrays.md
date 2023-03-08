@@ -1,87 +1,129 @@
 # Sorting Arrays
 
-***
-
 ### Sorting Arrays
 
-Sorting means putting elements in an _ordered sequence_.
+NumPy provides several functions to sort arrays. These functions include:
 
-_Ordered sequence_ is any sequence that has an order corresponding to elements, like numeric or alphabetical, ascending or descending.
+* `sort()`: Sorts an array in-place.
+* `argsort()`: Returns the indices that would sort an array.
+* `lexsort()`: Performs an indirect sort on multiple keys.
+* `partition()`: Rearranges the array in such a way that the first `k` elements are the smallest elements in the array, in no particular order.
+* `argpartition()`: Returns the indices that would partition an array.
 
-The NumPy ndarray object has a function called `sort()`, that will sort a specified array.
+### **`sort()`**
 
-#### Example
+The `sort()` function sorts an array in-place. Here's an example:
 
-Sort the array:
-
+```python
 import numpy as np
 
-arr = np.array(\[3, 2, 0, 1])
+# Create a 1-dimensional array
+arr = np.array([3, 2, 1, 4, 6, 5])
 
-print(np.sort(arr))
+# Sort the array
+arr.sort()
 
-Try it Yourself »
-
-**Note:** This method returns a copy of the array, leaving the original array unchanged.
-
-You can also sort arrays of strings, or any other data type:
-
-#### Example
-
-Sort the array alphabetically:
-
-import numpy as np
-
-arr = np.array(\['banana', 'cherry', 'apple'])
-
-print(np.sort(arr))
-
-Try it Yourself »
-
-#### Example
-
-Sort a boolean array:
-
-import numpy as np
-
-arr = np.array(\[True, False, True])
-
-print(np.sort(arr))
-
-Try it Yourself »
-
-***
-
-### Sorting a 2-D Array
-
-If you use the sort() method on a 2-D array, both arrays will be sorted:
-
-#### Example
-
-Sort a 2-D array:
-
-import numpy as np
-
-arr = np.array(\[\[3, 2, 4], \[5, 0, 1]])
-
-print(np.sort(arr))
-
-Try it Yourself »
-
-***
-
-### Test Yourself With Exercises
-
-### Exercise:
-
-Use the correct NumPy method to return a **sorted** array.
-
-```
-arr = np.array([3, 2, 0, 1])
-
-x = np.(arr)
+# Print the sorted array
+print(arr)
 ```
 
-Start the Exercise
+In this example, we create a 1-dimensional array with the values `[3, 2, 1, 4, 6, 5]`. We then use the `sort()` function to sort the array in-place. The output of the code will be:
 
-\
+```csharp
+[1 2 3 4 5 6]
+```
+
+### **`argsort()`**
+
+The `argsort()` function returns the indices that would sort an array. Here's an example:
+
+```python
+import numpy as np
+
+# Create a 1-dimensional array
+arr = np.array([3, 2, 1, 4, 6, 5])
+
+# Get the indices that would sort the array
+indices = np.argsort(arr)
+
+# Print the indices
+print(indices)
+```
+
+In this example, we create a 1-dimensional array with the values `[3, 2, 1, 4, 6, 5]`. We then use the `argsort()` function to get the indices that would sort the array. The output of the code will be:
+
+```csharp
+[2 1 0 3 5 4]
+```
+
+### **`lexsort()`**
+
+The `lexsort()` function performs an indirect sort on multiple keys. Here's an example:
+
+```python
+import numpy as np
+
+# Create 2 1-dimensional arrays
+last_name = np.array(['Smith', 'Jones', 'Lee', 'Lee', 'Brown'])
+first_name = np.array(['John', 'Alice', 'Emily', 'David', 'Rachel'])
+
+# Get the indices that would sort the arrays together
+indices = np.lexsort((first_name, last_name))
+
+# Print the sorted names
+print(last_name[indices], first_name[indices])
+```
+
+In this example, we create two 1-dimensional arrays: `last_name` and `first_name`. We then use the `lexsort()` function to get the indices that would sort the arrays together. The output of the code will be:
+
+```css
+['Brown' 'Jones' 'Lee' 'Lee' 'Smith'] ['Rachel' 'Alice' 'Emily' 'David' 'John']
+```
+
+### **`partition()`**
+
+The `partition()` function rearranges the array in such a way that the first `k` elements are the smallest elements in the array, in no particular order. The remaining elements are placed after the `k`th element in the array. Here's an example:
+
+```python
+pythonCopy codeimport numpy as np
+
+# Create a 1-dimensional array
+arr = np.array([3, 2, 1, 4, 6, 5])
+
+# Partition the array
+np.partition(arr, 3)
+
+# Print the partitioned array
+print(arr)
+```
+
+In this example, we create a 1-dimensional array with the values \`\[3, 2, 1, 4, 6, 5]`. We then use the` partition()\` function to rearrange the array such that the first 3 elements are the smallest elements in the array, in no particular order. The remaining elements are placed after the 3rd element in the array. The output of the code will be:
+
+```csharp
+[2 1 3 4 6 5]
+```
+
+### **`argpartition()`**
+
+The `argpartition()` function returns the indices that would partition an array. Here's an example:
+
+```python
+import numpy as np
+
+# Create a 1-dimensional array
+arr = np.array([3, 2, 1, 4, 6, 5])
+
+# Get the indices that would partition the array
+indices = np.argpartition(arr, 3)
+
+# Print the partitioned indices
+print(indices)
+```
+
+In this example, we create a 1-dimensional array with the values `[3, 2, 1, 4, 6, 5]`. We then use the `argpartition()` function to get the indices that would partition the array, such that the first 3 elements are the smallest elements in the array, in no particular order. The remaining elements are placed after the 3rd element in the array. The output of the code will be:
+
+```csharp
+[2 1 0 3 4 5]
+```
+
+These are some of the most common functions used for sorting arrays in NumPy. They are useful for many applications, such as data analysis, machine learning, and scientific computing.

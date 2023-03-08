@@ -1,153 +1,82 @@
 # Splitting Array
 
-***
+#### Splitting Arrays
 
-### Splitting NumPy Arrays
+NumPy allows you to split an array into multiple sub-arrays using the `split()` function. The `split()` function takes three arguments:
 
-Splitting is reverse operation of Joining.
+* The array to be split.
+* The number of equally shaped sub-arrays to be created.
+* The axis along which to split the array.
 
-Joining merges multiple arrays into one and Splitting breaks one array into multiple.
+Here's an example:
 
-We use `array_split()` for splitting arrays, we pass it the array we want to split and the number of splits.
-
-#### Example
-
-Split the array in 3 parts:
-
+```python
 import numpy as np
 
-arr = np.array(\[1, 2, 3, 4, 5, 6])
+# Create a 1-dimensional array
+arr = np.array([1, 2, 3, 4, 5, 6, 7, 8])
 
-newarr = np.array\_split(arr, 3)
+# Split the array into three sub-arrays
+sub_arrays = np.split(arr, 3)
 
-print(newarr)
+# Print the sub-arrays
+for sub_arr in sub_arrays:
+    print(sub_arr)
+```
 
-Try it Yourself »
+In this example, we create a 1-dimensional array with the values `[1, 2, 3, 4, 5, 6, 7, 8]`. We then use the `split()` function to split the array into three equally shaped sub-arrays along the first axis. The output of the code will be:
 
-**Note:** The return value is an array containing three arrays.
+```csharp
+[1 2 3]
+[4 5 6]
+[7 8]
+```
 
-If the array has less elements than required, it will adjust from the end accordingly.
+If you want to split an array into sub-arrays of unequal size, you can pass a list of indices to the `split()` function instead of the number of sub-arrays. Here's an example:
 
-#### Example
-
-Split the array in 4 parts:
-
+```python
 import numpy as np
 
-arr = np.array(\[1, 2, 3, 4, 5, 6])
+# Create a 1-dimensional array
+arr = np.array([1, 2, 3, 4, 5, 6, 7, 8])
 
-newarr = np.array\_split(arr, 4)
+# Split the array into sub-arrays of unequal size
+sub_arrays = np.split(arr, [3, 5, 6])
 
-print(newarr)
+# Print the sub-arrays
+for sub_arr in sub_arrays:
+    print(sub_arr)
+```
 
-Try it Yourself »
+In this example, we split the array into sub-arrays of sizes 3, 2, and 1, respectively. The output of the code will be:
 
-**Note:** We also have the method `split()` available but it will not adjust the elements when elements are less in source array for splitting like in example above, `array_split()` worked properly but `split()` would fail.
+```csharp
+[1 2 3]
+[4 5]
+[6]
+[7 8]
+```
 
-***
+The `split()` function returns a list of sub-arrays, rather than a single array. If you want to concatenate the sub-arrays into a single array again, you can use the `concatenate()` function. Here's an example:
 
-***
-
-### Split Into Arrays
-
-The return value of the `array_split()` method is an array containing each of the split as an array.
-
-If you split an array into 3 arrays, you can access them from the result just like any array element:
-
-#### Example
-
-Access the splitted arrays:
-
+```python
 import numpy as np
 
-arr = np.array(\[1, 2, 3, 4, 5, 6])
+# Create a 1-dimensional array
+arr = np.array([1, 2, 3, 4, 5, 6, 7, 8])
 
-newarr = np.array\_split(arr, 3)
+# Split the array into sub-arrays of unequal size
+sub_arrays = np.split(arr, [3, 5, 6])
 
-print(newarr\[0])\
-print(newarr\[1])\
-print(newarr\[2])
+# Concatenate the sub-arrays into a single array
+new_arr = np.concatenate(sub_arrays)
 
-Try it Yourself »
+# Print the new array
+print(new_arr)
+```
 
-***
+In this example, we split the array into sub-arrays of sizes 3, 2, and 1, respectively, using the `split()` function. We then concatenate the sub-arrays into a single array using the `concatenate()` function. The output of the code will be:
 
-### Splitting 2-D Arrays
-
-Use the same syntax when splitting 2-D arrays.
-
-Use the `array_split()` method, pass in the array you want to split and the number of splits you want to do.
-
-#### Example
-
-Split the 2-D array into three 2-D arrays.
-
-import numpy as np
-
-arr = np.array(\[\[1, 2], \[3, 4], \[5, 6], \[7, 8], \[9, 10], \[11, 12]])
-
-newarr = np.array\_split(arr, 3)
-
-print(newarr)
-
-Try it Yourself »
-
-The example above returns three 2-D arrays.
-
-Let's look at another example, this time each element in the 2-D arrays contains 3 elements.
-
-#### Example
-
-Split the 2-D array into three 2-D arrays.
-
-import numpy as np
-
-arr = np.array(\[\[1, 2, 3], \[4, 5, 6], \[7, 8, 9], \[10, 11, 12], \[13, 14, 15], \[16, 17, 18]])
-
-newarr = np.array\_split(arr, 3)
-
-print(newarr)
-
-Try it Yourself »
-
-The example above returns three 2-D arrays.
-
-In addition, you can specify which axis you want to do the split around.
-
-The example below also returns three 2-D arrays, but they are split along the row (axis=1).
-
-#### Example
-
-Split the 2-D array into three 2-D arrays along rows.
-
-import numpy as np
-
-arr = np.array(\[\[1, 2, 3], \[4, 5, 6], \[7, 8, 9], \[10, 11, 12], \[13, 14, 15], \[16, 17, 18]])
-
-newarr = np.array\_split(arr, 3, axis=1)
-
-print(newarr)
-
-Try it Yourself »
-
-An alternate solution is using `hsplit()` opposite of `hstack()`
-
-#### Example
-
-Use the `hsplit()` method to split the 2-D array into three 2-D arrays along rows.
-
-import numpy as np
-
-arr = np.array(\[\[1, 2, 3], \[4, 5, 6], \[7, 8, 9], \[10, 11, 12], \[13, 14, 15], \[16, 17, 18]])
-
-newarr = np.hsplit(arr, 3)
-
-print(newarr)
-
-Try it Yourself »
-
-**Note:** Similar alternates to `vstack()` and `dstack()` are available as `vsplit()` and `dsplit()`.
-
-***
-
-\
+```csharp
+[1 2 3 4 5 6 7 8]
+```

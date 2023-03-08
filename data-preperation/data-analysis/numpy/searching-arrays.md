@@ -1,143 +1,80 @@
 # Searching Arrays
 
-***
-
 ### Searching Arrays
 
-You can search an array for a certain value, and return the indexes that get a match.
+NumPy provides several functions to search for specific values or elements in an array. These functions include:
 
-To search an array, use the `where()` method.
+* `where()`: Returns the indices of elements in an array where a given condition is true.
+* `searchsorted()`: Finds the indices where elements should be inserted to maintain order in a sorted array.
+* `extract()`: Extracts elements from an array that satisfy a given condition.
 
-#### Example
+### **`where()`**
 
-Find the indexes where the value is 4:
+The `where()` function takes a single argument, which is a Boolean condition, and returns the indices of the elements in the array where the condition is `True`. Here's an example:
 
+```python
 import numpy as np
 
-arr = np.array(\[1, 2, 3, 4, 5, 4, 4])
+# Create a 1-dimensional array
+arr = np.array([1, 2, 3, 4, 5, 6, 7, 8])
 
-x = np.where(arr == 4)
+# Find the indices of the elements where the value is greater than 5
+indices = np.where(arr > 5)
 
-print(x)
-
-Try it Yourself »
-
-The example above will return a tuple: `(array([3, 5, 6],)`
-
-Which means that the value 4 is present at index 3, 5, and 6.
-
-#### Example
-
-Find the indexes where the values are even:
-
-import numpy as np
-
-arr = np.array(\[1, 2, 3, 4, 5, 6, 7, 8])
-
-x = np.where(arr%2 == 0)
-
-print(x)
-
-Try it Yourself »
-
-#### Example
-
-Find the indexes where the values are odd:
-
-import numpy as np
-
-arr = np.array(\[1, 2, 3, 4, 5, 6, 7, 8])
-
-x = np.where(arr%2 == 1)
-
-print(x)
-
-Try it Yourself »
-
-***
-
-***
-
-### Search Sorted
-
-There is a method called `searchsorted()` which performs a binary search in the array, and returns the index where the specified value would be inserted to maintain the search order.
-
-The `searchsorted()` method is assumed to be used on sorted arrays.
-
-#### Example
-
-Find the indexes where the value 7 should be inserted:
-
-import numpy as np
-
-arr = np.array(\[6, 7, 8, 9])
-
-x = np.searchsorted(arr, 7)
-
-print(x)
-
-Try it Yourself »
-
-Example explained: The number 7 should be inserted on index 1 to remain the sort order.
-
-The method starts the search from the left and returns the first index where the number 7 is no longer larger than the next value.
-
-#### Search From the Right Side
-
-By default the left most index is returned, but we can give `side='right'` to return the right most index instead.
-
-#### Example
-
-Find the indexes where the value 7 should be inserted, starting from the right:
-
-import numpy as np
-
-arr = np.array(\[6, 7, 8, 9])
-
-x = np.searchsorted(arr, 7, side='right')
-
-print(x)
-
-Try it Yourself »
-
-Example explained: The number 7 should be inserted on index 2 to remain the sort order.
-
-The method starts the search from the right and returns the first index where the number 7 is no longer less than the next value.
-
-#### Multiple Values
-
-To search for more than one value, use an array with the specified values.
-
-#### Example
-
-Find the indexes where the values 2, 4, and 6 should be inserted:
-
-import numpy as np
-
-arr = np.array(\[1, 3, 5, 7])
-
-x = np.searchsorted(arr, \[2, 4, 6])
-
-print(x)
-
-Try it Yourself »
-
-The return value is an array: `[1 2 3]` containing the three indexes where 2, 4, 6 would be inserted in the original array to maintain the order.
-
-***
-
-### Test Yourself With Exercises
-
-### Exercise:
-
-Use the correct NumPy method to find all items with the value 4.
-
-```
-arr = np.array([1, 2, 3, 4, 5, 4, 4])
-
-x = np.(arr == 4)
+# Print the indices
+print(indices)
 ```
 
-Start the Exercise
+In this example, we create a 1-dimensional array with the values `[1, 2, 3, 4, 5, 6, 7, 8]`. We then use the `where()` function to find the indices of the elements where the value is greater than 5. The output of the code will be:
 
-\
+```c
+(array([5, 6, 7]),)
+```
+
+Note that the output is a tuple containing a single element, which is an array of indices.
+
+### **`searchsorted()`**
+
+The `searchsorted()` function takes two arguments: the array to be searched, and the value to be searched for. It returns the index at which the value should be inserted in order to maintain the sorted order of the array. Here's an example:
+
+```python
+import numpy as np
+
+# Create a sorted 1-dimensional array
+arr = np.array([1, 2, 3, 4, 5, 6, 7, 8])
+
+# Find the index where the value 6 should be inserted to maintain order
+index = np.searchsorted(arr, 6)
+
+# Print the index
+print(index)
+```
+
+In this example, we create a 1-dimensional array with the values `[1, 2, 3, 4, 5, 6, 7, 8]`, which is sorted in ascending order. We then use the `searchsorted()` function to find the index where the value 6 should be inserted to maintain the sorted order. The output of the code will be:
+
+```
+5
+```
+
+### **`extract()`**
+
+The `extract()` function takes two arguments: the array to be searched, and a Boolean condition that determines which elements to extract. It returns an array containing only the elements that satisfy the condition. Here's an example:
+
+```python
+import numpy as np
+
+# Create a 1-dimensional array
+arr = np.array([1, 2, 3, 4, 5, 6, 7, 8])
+
+# Extract the elements where the value is greater than 5
+new_arr = np.extract(arr > 5, arr)
+
+# Print the new array
+print(new_arr)
+```
+
+In this example, we create a 1-dimensional array with the values `[1, 2, 3, 4, 5, 6, 7, 8]`. We then use the `extract()` function to extract the elements where the value is greater than 5. The output of the code will be:
+
+```csharp
+[6 7 8]
+```
