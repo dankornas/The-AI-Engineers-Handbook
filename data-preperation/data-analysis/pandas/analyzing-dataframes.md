@@ -1,109 +1,158 @@
 # Analyzing DataFrames
 
-***
+Once you have loaded data into a Pandas DataFrame, you can start analyzing it using the many built-in functions and methods provided by Pandas. Here are a few examples of some of the most commonly used methods for analyzing data in a DataFrame:
 
-### Viewing the Data
+## Using built-in methods
 
-One of the most used method for getting a quick overview of the DataFrame, is the `head()` method.
+### The `head()` and `tail()` Methods
 
-The `head()` method returns the headers and a specified number of rows, starting from the top.
+The `head()` and `tail()` methods are used to view the first and last n rows of a DataFrame, respectively. By default, both methods return the first or last 5 rows of the DataFrame, but you can specify a different number by passing an integer argument to the method. For example:
 
-#### Example
-
-Get a quick overview by printing the first 10 rows of the DataFrame:
-
+```python
 import pandas as pd
 
-df = pd.read\_csv('data.csv')
+# load data into a DataFrame
+df = pd.read_csv('data.csv')
 
+# view the first 10 rows of the DataFrame
 print(df.head(10))
 
-Try it Yourself »
+# view the last 3 rows of the DataFrame
+print(df.tail(3))
+```
 
-In our examples we will be using a CSV file called 'data.csv'.
+### The `describe()` Method
 
-Download data.csv, or open data.csv in your browser.
+The `describe()` method is used to generate descriptive statistics of the DataFrame. By default, it only analyzes numeric columns and returns the count, mean, standard deviation, minimum, maximum, and quartile values of each column. For example:
 
-**Note:** if the number of rows is not specified, the `head()` method will return the top 5 rows.
-
-#### Example
-
-Print the first 5 rows of the DataFrame:
-
+```python
 import pandas as pd
 
-df = pd.read\_csv('data.csv')
+# load data into a DataFrame
+df = pd.read_csv('data.csv')
 
-print(df.head())
-
-Try it Yourself »
-
-There is also a `tail()` method for viewing the _last_ rows of the DataFrame.
-
-The `tail()` method returns the headers and a specified number of rows, starting from the bottom.
-
-***
-
-***
-
-### Info About the Data
-
-The DataFrames object has a method called `info()`, that gives you more information about the data set.
-
-#### Example
-
-Print information about the data:
-
-print(df.info())&#x20;
-
-### Result
-
-```
-  <class 'pandas.core.frame.DataFrame'>
-  RangeIndex: 169 entries, 0 to 168
-  Data columns (total 4 columns):
-   #   Column    Non-Null Count  Dtype  
-  ---  ------    --------------  -----  
-   0   Duration  169 non-null    int64  
-   1   Pulse     169 non-null    int64  
-   2   Maxpulse  169 non-null    int64  
-   3   Calories  164 non-null    float64
-  dtypes: float64(1), int64(3)
-  memory usage: 5.4 KB
-  None
-    
+# generate descriptive statistics of the DataFrame
+print(df.describe())
 ```
 
-Try it Yourself »
+### The `info()` Method
 
-### Result Explained
+The `info()` method is used to display a summary of the DataFrame, including the number of rows and columns, the data type of each column, and the amount of memory used by the DataFrame. For example:
 
-The result tells us there are 169 rows and 4 columns:
+```python
+import pandas as pd
 
-```
-  RangeIndex: 169 entries, 0 to 168
-  Data columns (total 4 columns):
-```
+# load data into a DataFrame
+df = pd.read_csv('data.csv')
 
-And the name of each column, with the data type:
-
-```
-   #   Column    Non-Null Count  Dtype  
-  ---  ------    --------------  -----  
-   0   Duration  169 non-null    int64  
-   1   Pulse     169 non-null    int64  
-   2   Maxpulse  169 non-null    int64  
-   3   Calories  164 non-null    float64
+# display a summary of the DataFrame
+print(df.info())
 ```
 
-### Null Values
+### The `value_counts()` Method
 
-The `info()` method also tells us how many Non-Null values there are present in each column, and in our data set it seems like there are 164 of 169 Non-Null values in the "Calories" column.
+The `value_counts()` method is used to count the number of occurrences of each unique value in a column of the DataFrame. It can be used to quickly get an idea of the distribution of values in a column. For example:
 
-Which means that there are 5 rows with no value at all, in the "Calories" column, for whatever reason.
+```python
+import pandas as pd
 
-Empty values, or Null values, can be bad when analyzing data, and you should consider removing rows with empty values. This is a step towards what is called _cleaning data_, and you will learn more about that in the next chapters.
+# load data into a DataFrame
+df = pd.read_csv('data.csv')
 
-***
+# count the number of occurrences of each unique value in the 'category' column
+print(df['category'].value_counts())
+```
 
-\
+These are just a few of the many methods available for analyzing data in a Pandas DataFrame. Be sure to check out the Pandas documentation for a full list of available methods and functions.
+
+## Filtering and Selecting Data
+
+One of the most common tasks when working with data is filtering and selecting subsets of the data based on certain criteria. Pandas provides several methods for selecting and filtering data in a DataFrame, including:
+
+* Indexing using the square bracket notation
+* The `loc` and `iloc` indexers
+* Boolean indexing
+
+Indexing using the square bracket notation is used to select columns from a DataFrame by their names or indices. For example:
+
+```python
+import pandas as pd
+
+# load data into a DataFrame
+df = pd.read_csv('data.csv')
+
+# select a single column by name
+category = df['category']
+
+# select multiple columns by names
+subset = df[['category', 'price']]
+
+# select a single column by index
+col = df.iloc[:, 1]
+```
+
+The `loc` and `iloc` indexers are used to select rows and columns from a DataFrame by their labels or indices, respectively. For example:
+
+```python
+import pandas as pd
+
+# load data into a DataFrame
+df = pd.read_csv('data.csv')
+
+# select a single row by label
+row = df.loc[2]
+
+# select multiple rows by labels
+subset = df.loc[[1, 3, 5]]
+
+# select a single row by index
+row = df.iloc[2]
+
+# select multiple rows by indices
+subset = df.iloc[[1, 3, 5]]
+
+# select a subset of rows and columns by labels and indices
+subset = df.loc[[1, 3, 5], ['category', 'price']]
+```
+
+Boolean indexing is used to select rows from a DataFrame that satisfy certain conditions. For example:
+
+```python
+import pandas as pd
+
+# load data into a DataFrame
+df = pd.read_csv('data.csv')
+
+# select rows where the 'price' column is greater than 50
+subset = df[df['price'] > 50]
+
+# select rows where the 'category' column is 'electronics' or 'clothing'
+subset = df[(df['category'] == 'electronics') | (df['category'] == 'clothing')]
+```
+
+## Grouping Data
+
+Grouping data in a Pandas DataFrame allows you to split the DataFrame into groups based on one or more columns, and then perform calculations on each group. Here are some examples:
+
+```python
+# Group the DataFrame by column 'A' and calculate the mean of column 'B'
+df.groupby('A')['B'].mean()
+
+# Group the DataFrame by columns 'A' and 'C', and calculate the sum of column 'B' and the mean of column 'D'
+df.groupby(['A', 'C']).agg({'B': 'sum', 'D': 'mean'})
+```
+
+## Aggregating Data
+
+Aggregating data in a Pandas DataFrame allows you to perform calculations on the entire DataFrame, or on specific columns. Here are some examples:
+
+```python
+# Calculate the sum of all values in the DataFrame
+df.sum()
+
+# Calculate the mean of all columns in the DataFrame
+df.mean()
+
+# Calculate the sum of column 'A' and the mean of column 'B'
+df.agg({'A': 'sum', 'B': 'mean'})
+```

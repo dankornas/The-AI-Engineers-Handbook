@@ -83,12 +83,7 @@
     * [Pandas Read JSON](data-preperation/data-analysis/pandas/pandas-read-json.md)
     * [Analyzing DataFrames](data-preperation/data-analysis/pandas/analyzing-dataframes.md)
     * [Cleaning Data](data-preperation/data-analysis/pandas/cleaning-data.md)
-    * [Cleaning Empty Cells](data-preperation/data-analysis/pandas/cleaning-empty-cells.md)
-    * [Cleaning Data of Wrong Format](data-preperation/data-analysis/pandas/cleaning-data-of-wrong-format.md)
-    * [Fixing Wrong Data](data-preperation/data-analysis/pandas/fixing-wrong-data.md)
-    * [Removing Duplicates](data-preperation/data-analysis/pandas/removing-duplicates.md)
     * [Data Correlations](data-preperation/data-analysis/pandas/data-correlations.md)
-    * [Plotting](data-preperation/data-analysis/pandas/plotting.md)
     * [DataFrame Reference](data-preperation/data-analysis/pandas/dataframe-reference.md)
   * [Analyzing a Dataset](data-preperation/data-analysis/analyzing-a-dataset.md)
 

@@ -1,75 +1,37 @@
 # Pandas Getting Started
 
-***
+Pandas is a Python library used for data manipulation and analysis. It provides powerful data structures for handling structured and time-series data
 
-### Installation of Pandas
+### Installing Pandas
 
-If you have Python and PIP already installed on a system, then installation of Pandas is very easy.
+Pandas can be installed using pip, the Python package manager. Open your terminal or command prompt and run the following command:
 
-Install it using this command:
+```
+pip install pandas
+```
 
-C:\Users\\_Your Name_>pip install pandas
+This will download and install the latest version of Pandas on your system.
 
-If this command fails, then use a python distribution that already has Pandas installed like, Anaconda, Spyder etc.
+### Importing Pandas
 
-***
+Once Pandas is installed, you can import it into your Python script using the `import` statement. It is a convention to use the alias `pd` when importing Pandas:
 
-### Import Pandas
+```python
+import pandas as pd
+```
 
-Once Pandas is installed, import it in your applications by adding the `import` keyword:
+### Using Pandas as pd
 
-Now Pandas is imported and ready to use.
+In the above import statement, we used `as pd` to create an alias for Pandas. This is a commonly used convention, as it makes it easier to refer to the library throughout your code. Instead of typing out `pandas` every time you want to use it, you can simply type `pd`. For example:
 
-#### Example
-
-import pandas
-
-mydataset = {\
-&#x20; 'cars': \["BMW", "Volvo", "Ford"],\
-&#x20; 'passings': \[3, 7, 2]\
-}
-
-myvar = pandas.DataFrame(mydataset)
-
-print(myvar)
-
-Try it Yourself »
-
-***
-
-***
-
-### Pandas as pd
-
-Pandas is usually imported under the `pd` alias.
-
-**alias:** In Python alias are an alternate name for referring to the same thing.
-
-Create an alias with the `as` keyword while importing:
-
-Now the Pandas package can be referred to as `pd` instead of `pandas`.
-
-#### Example
-
+```python
 import pandas as pd
 
-mydataset = {\
-&#x20; 'cars': \["BMW", "Volvo", "Ford"],\
-&#x20; 'passings': \[3, 7, 2]\
-}
+# create a pandas series
+s = pd.Series([1, 3, 5, np.nan, 6, 8])
 
-myvar = pd.DataFrame(mydataset)
+# print the series
+print(s)
+```
 
-print(myvar)
-
-Try it Yourself »
-
-***
-
-### Checking Pandas Version
-
-The version string is stored under `__version__` attribute.
-
-***
-
-\
+In this example, we create a Pandas Series object using the `pd.Series()` function, and assign it to the variable `s`. By using `pd` as an alias for Pandas, we are able to call the `pd.Series()` function without having to type out `pandas.Series()`.
