@@ -139,14 +139,3 @@ In this example, the PRIMARY KEY constraint is used to specify that the "id" col
 
 In summary, to create tables in a database with MySQL and Python, you will need to connect to the database, create a cursor object, check if the table exists using the SHOW TABLES SQL statement, use the CREATE TABLE SQL statement to create a new table if it does not already exist, and specify a primary key using the PRIMARY KEY constraint in the CREATE TABLE statement.
 
-
-
-{% hint style="info" %}
-### Want to learn more?
-
-Be sure to sign up for <mark style="color:blue;">**The AI Engineer Master Class**</mark> to get more in depth explanations and video tutorials of end-to-end Machine Learning Projects.&#x20;
-
-:arrow\_down::arrow\_down: Click the link below to sign up and stay up-to-date for new releases! :arrow\_down::arrow\_down:
-{% endhint %}
-
-{% embed url="https://www.getrevue.co/profile/dankornas" %}

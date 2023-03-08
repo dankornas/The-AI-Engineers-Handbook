@@ -121,13 +121,3 @@ cnx.commit()
 ```
 
 In this example, the DROP TABLE statement is used with the IF EXISTS keyword to delete the "users" table from the database only if it exists. The changes are then saved using the cnx.commit() method.
-
-{% hint style="info" %}
-### Want to learn more?
-
-Be sure to sign up for <mark style="color:blue;">**The AI Engineer Master Class**</mark> to get more in depth explanations and video tutorials of end-to-end Machine Learning Projects.&#x20;
-
-:arrow\_down::arrow\_down: Click the link below to sign up and stay up-to-date for new releases! :arrow\_down::arrow\_down:
-{% endhint %}
-
-{% embed url="https://www.getrevue.co/profile/dankornas" %}

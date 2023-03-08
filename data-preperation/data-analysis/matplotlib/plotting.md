@@ -22,13 +22,13 @@ If we need to plot a line from (1, 3) to (8, 10), we have to pass two arrays \[1
 Draw a line in a diagram from position (1, 3) to position (8, 10):
 
 ```python
-import matplotlib.pyplot as plt\
+import matplotlib.pyplot as plt
 import numpy as np
 
-xpoints = np.array(\[1, 8])\
-ypoints = np.array(\[3, 10])
+xpoints = np.array([1, 8])
+ypoints = np.array([3, 10])
 
-plt.plot(xpoints, ypoints)\
+plt.plot(xpoints, ypoints)
 plt.show()
 ```
 
@@ -45,13 +45,13 @@ To plot only the markers, you can use _shortcut string notation_ parameter 'o', 
 Draw two points in the diagram, one at position (1, 3) and one in position (8, 10):
 
 ```python
-import matplotlib.pyplot as plt\
+import matplotlib.pyplot as plt
 import numpy as np
 
-xpoints = np.array(\[1, 8])\
-ypoints = np.array(\[3, 10])
+xpoints = np.array([1, 8])
+ypoints = np.array([3, 10])
 
-plt.plot(xpoints, ypoints, 'o')\
+plt.plot(xpoints, ypoints, 'o')
 plt.show()
 ```
 
@@ -64,13 +64,13 @@ You can plot as many points as you like, just make sure you have the same number
 Draw a line in a diagram from position (1, 3) to (2, 8) then to (6, 1) and finally to position (8, 10):
 
 ```python
-import matplotlib.pyplot as plt\
+import matplotlib.pyplot as plt
 import numpy as np
 
-xpoints = np.array(\[1, 2, 6, 8])\
-ypoints = np.array(\[3, 8, 1, 10])
+xpoints = np.array([1, 2, 6, 8])
+ypoints = np.array([3, 8, 1, 10])
 
-plt.plot(xpoints, ypoints)\
+plt.plot(xpoints, ypoints)
 plt.show()
 ```
 
@@ -85,25 +85,15 @@ So, if we take the same example as above, and leave out the x-points, the diagra
 Plotting without x-points:
 
 ```python
-import matplotlib.pyplot as plt\
+import matplotlib.pyplot as plt
 import numpy as np
 
-ypoints = np.array(\[3, 8, 1, 10, 5, 7])
+ypoints = np.array([3, 8, 1, 10, 5, 7])
 
-plt.plot(ypoints)\
+plt.plot(ypoints)
 plt.show()
 ```
 
 ![img\_matplotlib\_plotting4](https://user-images.githubusercontent.com/86244964/197048042-74f53d07-3d19-4670-a22d-de81226b2a40.png)
 
 The **x-points** in the example above is \[0, 1, 2, 3, 4, 5].
-
-{% hint style="info" %}
-#### Want to learn more?
-
-Be sure to sign up for <mark style="color:blue;">**The AI Engineer Master Class**</mark> to get more in depth explanations and video tutorials of end-to-end Machine Learning Projects.
-
-:arrow\_down::arrow\_down: Click the link below to sign up and stay up-to-date for new releases! :arrow\_down::arrow\_down:
-{% endhint %}
-
-{% embed url="https://www.getrevue.co/profile/dankornas" %}

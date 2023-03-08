@@ -84,13 +84,3 @@ cnx.commit()
 In this example, the mysql.connector.commit() function is used to save the changes to the database after inserting records into the "users" table.
 
 In summary, to add records to a table in a database with MySQL and Python, you will need to connect to the database, create a cursor object, use the INSERT SQL statement to insert records into the table, and commit the changes to the database using the mysql.connector.commit() function.
-
-{% hint style="info" %}
-### Want to learn more?
-
-Be sure to sign up for <mark style="color:blue;">**The AI Engineer Master Class**</mark> to get more in depth explanations and video tutorials of end-to-end Machine Learning Projects.&#x20;
-
-:arrow\_down::arrow\_down: Click the link below to sign up and stay up-to-date for new releases! :arrow\_down::arrow\_down:
-{% endhint %}
-
-{% embed url="https://www.getrevue.co/profile/dankornas" %}

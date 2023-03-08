@@ -16,24 +16,14 @@ Now the Pyplot package can be referred to as `plt`.
 Draw a line in a diagram from position (0,0) to position (6,250):
 
 ```python
-import matplotlib.pyplot as plt\
+import matplotlib.pyplot as plt
 import numpy as np
 
 xpoints = np.array([0, 6])
 ypoints = np.array([0, 250])
 
-plt.plot(xpoints, ypoints)\
+plt.plot(xpoints, ypoints)
 plt.show()
 ```
 
 ![img\_matplotlib\_pyplot](https://user-images.githubusercontent.com/86244964/197040813-ace82920-82fc-41ee-abf6-33b37e9d5305.png)
-
-{% hint style="info" %}
-#### Want to learn more?
-
-Be sure to sign up for <mark style="color:blue;">**The AI Engineer Master Class**</mark> to get more in depth explanations and video tutorials of end-to-end Machine Learning Projects.
-
-:arrow\_down::arrow\_down: Click the link below to sign up and stay up-to-date for new releases! :arrow\_down::arrow\_down:
-{% endhint %}
-
-{% embed url="https://www.getrevue.co/profile/dankornas" %}

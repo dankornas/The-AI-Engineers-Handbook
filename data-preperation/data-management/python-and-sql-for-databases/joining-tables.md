@@ -94,13 +94,3 @@ for row in cursor.fetchall():
 ```
 
 In this example, the SELECT statement is used to join the "users" and "posts" tables using a right join. The RIGHT JOIN keyword is used to specify that all the records from the "posts" table will be included in the result set, even if there are no matching records in the "users" table. The rows returned from the query are then printed to the console.
-
-{% hint style="info" %}
-### Want to learn more?
-
-Be sure to sign up for <mark style="color:blue;">**The AI Engineer Master Class**</mark> to get more in depth explanations and video tutorials of end-to-end Machine Learning Projects.&#x20;
-
-:arrow\_down::arrow\_down: Click the link below to sign up and stay up-to-date for new releases! :arrow\_down::arrow\_down:
-{% endhint %}
-
-{% embed url="https://www.getrevue.co/profile/dankornas" %}

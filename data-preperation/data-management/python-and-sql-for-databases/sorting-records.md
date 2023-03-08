@@ -53,13 +53,3 @@ query
 ```
 
 In this example, the SELECT statement is used to read from the "users" table and the ORDER BY clause is used with the DESC keyword to sort the records by the "username" column in descending order. The rows returned from the query are then printed to the console.
-
-{% hint style="info" %}
-### Want to learn more?
-
-Be sure to sign up for <mark style="color:blue;">**The AI Engineer Master Class**</mark> to get more in depth explanations and video tutorials of end-to-end Machine Learning Projects.&#x20;
-
-:arrow\_down::arrow\_down: Click the link below to sign up and stay up-to-date for new releases! :arrow\_down::arrow\_down:
-{% endhint %}
-
-{% embed url="https://www.getrevue.co/profile/dankornas" %}
