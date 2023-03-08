@@ -12,12 +12,12 @@ With Pyplot, you can use the `pie()` function to draw pie charts.
 A simple pie chart:
 
 ```python
-import matplotlib.pyplot as plt\
+import matplotlib.pyplot as plt
 import numpy as np
 
-y = np.array(\[35, 25, 25, 15])
+y = np.array([35, 25, 25, 15])
 
-plt.pie(y)\
+plt.pie(y)
 plt.show()&#x20;
 ```
 
@@ -38,13 +38,13 @@ The `label` parameter must be an array with one label for each wedge.
 A simple pie chart:
 
 ```python
-import matplotlib.pyplot as plt\
+import matplotlib.pyplot as plt
 import numpy as np
 
-y = np.array(\[35, 25, 25, 15])\
-mylabels = \["Apples", "Bananas", "Cherries", "Dates"]
+y = np.array(\[35, 25, 25, 15])
+mylabels = ["Apples", "Bananas", "Cherries", "Dates"]
 
-plt.pie(y, labels = mylabels)\
+plt.pie(y, labels = mylabels)
 plt.show()&#x20;
 ```
 
@@ -59,14 +59,14 @@ The `startangle` parameter is defined with an angle in degrees, default angle is
 Start the first wedge at 90 degrees:
 
 ```python
-import matplotlib.pyplot as plt\
+import matplotlib.pyplot as plt
 import numpy as np
 
-y = np.array(\[35, 25, 25, 15])\
-mylabels = \["Apples", "Bananas", "Cherries", "Dates"]
+y = np.array([35, 25, 25, 15])
+mylabels = ["Apples", "Bananas", "Cherries", "Dates"]
 
-plt.pie(y, labels = mylabels, startangle = 90)\
-plt.show()&#x20;
+plt.pie(y, labels = mylabels, startangle = 90)
+plt.show()
 ```
 
 ![img\_matplotlib\_pie\_angles](https://user-images.githubusercontent.com/86244964/197153962-a32de2c2-5aea-43a6-8bca-3b4a3f27ad68.png)
@@ -85,12 +85,12 @@ Pull the "Apples" wedge 0.2 from the center of the pie:
 import matplotlib.pyplot as plt
 import numpy as np
 
-y = np.array(\[35, 25, 25, 15])
+y = np.array([35, 25, 25, 15])
 mylabels = ["Apples", "Bananas", "Cherries", "Dates"]
 myexplode = [0.2, 0, 0, 0]
 
 plt.pie(y, labels = mylabels, explode = myexplode)
-plt.show()&#x20;
+plt.show()
 ```
 
 ![img\_matplotlib\_pie\_explode](https://user-images.githubusercontent.com/86244964/197154105-71c2679a-add7-4df3-86b4-c0ac05206357.png)
@@ -102,15 +102,15 @@ Add a shadow to the pie chart by setting the `shadows` parameter to `True`.
 Add a shadow:
 
 ```python
-import matplotlib.pyplot as plt\
+import matplotlib.pyplot as plt
 import numpy as np
 
-y = np.array(\[35, 25, 25, 15])\
-mylabels = \["Apples", "Bananas", "Cherries", "Dates"]\
-myexplode = \[0.2, 0, 0, 0]
+y = np.array([35, 25, 25, 15])
+mylabels = ["Apples", "Bananas", "Cherries", "Dates"]
+myexplode = [0.2, 0, 0, 0]
 
-plt.pie(y, labels = mylabels, explode = myexplode, shadow = True)\
-plt.show()&#x20;
+plt.pie(y, labels = mylabels, explode = myexplode, shadow = True)
+plt.show()
 ```
 
 ![img\_matplotlib\_pie\_shadow](https://user-images.githubusercontent.com/86244964/197154178-c3355119-7fff-4286-a19b-7a872411392f.png)
@@ -124,15 +124,15 @@ The `colors` parameter, if specified, must be an array with one value for each w
 Specify a new color for each wedge:
 
 ```python
-import matplotlib.pyplot as plt\
+import matplotlib.pyplot as plt
 import numpy as np
 
-y = np.array(\[35, 25, 25, 15])\
-mylabels = \["Apples", "Bananas", "Cherries", "Dates"]\
-mycolors = \["black", "hotpink", "b", "#4CAF50"]
+y = np.array([35, 25, 25, 15])
+mylabels = ["Apples", "Bananas", "Cherries", "Dates"]
+mycolors = ["black", "hotpink", "b", "#4CAF50"]
 
-plt.pie(y, labels = mylabels, colors = mycolors)\
-plt.show()&#x20;
+plt.pie(y, labels = mylabels, colors = mycolors)
+plt.show()
 ```
 
 ![img\_matplotlib\_pie\_color](https://user-images.githubusercontent.com/86244964/197154255-386f4533-6576-48d3-a3f6-984df649c104.png)
@@ -155,15 +155,15 @@ To add a list of explanation for each wedge, use the `legend()` function.
 Add a legend:
 
 ```python
-import matplotlib.pyplot as plt\
+import matplotlib.pyplot as plt
 import numpy as np
 
-y = np.array(\[35, 25, 25, 15])\
-mylabels = \["Apples", "Bananas", "Cherries", "Dates"]
+y = np.array([35, 25, 25, 15])
+mylabels = ["Apples", "Bananas", "Cherries", "Dates"]
 
-plt.pie(y, labels = mylabels)\
-plt.legend()\
-plt.show()&#x20;
+plt.pie(y, labels = mylabels)
+plt.legend()
+plt.show()
 ```
 
 ![img\_matplotlib\_pie\_legend](https://user-images.githubusercontent.com/86244964/197154353-f2edfd93-7c0a-4ca8-b6d5-626cc73ca595.png)
@@ -175,25 +175,15 @@ To add a header to the legend, add the `title` parameter to the `legend` functio
 Add a legend with a header:
 
 ```python
-import matplotlib.pyplot as plt\
+import matplotlib.pyplot as plt
 import numpy as np
 
-y = np.array(\[35, 25, 25, 15])\
-mylabels = \["Apples", "Bananas", "Cherries", "Dates"]
+y = np.array([35, 25, 25, 15])
+mylabels = ["Apples", "Bananas", "Cherries", "Dates"]
 
-plt.pie(y, labels = mylabels)\
-plt.legend(title = "Four Fruits:")\
-plt.show()&#x20;
+plt.pie(y, labels = mylabels)
+plt.legend(title = "Four Fruits:")
+plt.show()
 ```
 
 ![img\_matplotlib\_pie\_legend\_title](https://user-images.githubusercontent.com/86244964/197154437-f70a7e4d-cfbd-40ab-b620-4dce9a3f53ec.png)
-
-{% hint style="info" %}
-#### Want to learn more?
-
-Be sure to sign up for <mark style="color:blue;">**The AI Engineer Master Class**</mark> to get more in depth explanations and video tutorials of end-to-end Machine Learning Projects.
-
-:arrow\_down::arrow\_down: Click the link below to sign up and stay up-to-date for new releases! :arrow\_down::arrow\_down:
-{% endhint %}
-
-{% embed url="https://www.getrevue.co/profile/dankornas" %}

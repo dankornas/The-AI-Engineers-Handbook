@@ -12,21 +12,21 @@ With the `subplot()` function you can draw multiple plots in one figure.
 Draw 2 plots:
 
 ```python
-import matplotlib.pyplot as plt\
+import matplotlib.pyplot as plt
 import numpy as np
 
-\#plot 1:\
-x = np.array(\[0, 1, 2, 3])\
-y = np.array(\[3, 8, 1, 10])
+#plot 1:
+x = np.array([0, 1, 2, 3])
+y = np.array([3, 8, 1, 10])
 
-plt.subplot(1, 2, 1)\
+plt.subplot(1, 2, 1)
 plt.plot(x,y)
 
-\#plot 2:\
-x = np.array(\[0, 1, 2, 3])\
-y = np.array(\[10, 20, 30, 40])
+#plot 2:
+x = np.array([0, 1, 2, 3])
+y = np.array([10, 20, 30, 40])
 
-plt.subplot(1, 2, 2)\
+plt.subplot(1, 2, 2)
 plt.plot(x,y)
 
 plt.show()
@@ -43,13 +43,13 @@ The layout is organized in rows and columns, which are represented by the _first
 The third argument represents the index of the current plot.
 
 ```python
-plt.subplot(1, 2, 1)\
-\#the figure has 1 row, 2 columns, and this plot is the _first_ plot.
+plt.subplot(1, 2, 1)
+#the figure has 1 row, 2 columns, and this plot is the _first_ plot.
 ```
 
 ```python
-plt.subplot(1, 2, 2)\
-\#the figure has 1 row, 2 columns, and this plot is the _second_ plot.
+plt.subplot(1, 2, 2)
+#the figure has 1 row, 2 columns, and this plot is the _second_ plot.
 ```
 
 So, if we want a figure with 2 rows an 1 column (meaning that the two plots will be displayed on top of each other instead of side-by-side), we can write the syntax like this:
@@ -57,21 +57,21 @@ So, if we want a figure with 2 rows an 1 column (meaning that the two plots will
 Draw 2 plots on top of each other:
 
 ```python
-import matplotlib.pyplot as plt\
+import matplotlib.pyplot as plt
 import numpy as np
 
-\#plot 1:\
-x = np.array(\[0, 1, 2, 3])\
-y = np.array(\[3, 8, 1, 10])
+#plot 1:
+x = np.array([0, 1, 2, 3])
+y = np.array([3, 8, 1, 10])
 
-plt.subplot(2, 1, 1)\
+plt.subplot(2, 1, 1)
 plt.plot(x,y)
 
-\#plot 2:\
-x = np.array(\[0, 1, 2, 3])\
-y = np.array(\[10, 20, 30, 40])
+#plot 2:
+x = np.array([0, 1, 2, 3])
+y = np.array([10, 20, 30, 40])
 
-plt.subplot(2, 1, 2)\
+plt.subplot(2, 1, 2)
 plt.plot(x,y)
 
 plt.show()
@@ -84,43 +84,43 @@ You can draw as many plots you like on one figure, just descibe the number of ro
 Draw 6 plots:
 
 ```python
-import matplotlib.pyplot as plt\
+import matplotlib.pyplot as plt
 import numpy as np
 
-x = np.array(\[0, 1, 2, 3])\
-y = np.array(\[3, 8, 1, 10])
+x = np.array([0, 1, 2, 3])
+y = np.array([3, 8, 1, 10])
 
-plt.subplot(2, 3, 1)\
+plt.subplot(2, 3, 1)
 plt.plot(x,y)
 
-x = np.array(\[0, 1, 2, 3])\
-y = np.array(\[10, 20, 30, 40])
+x = np.array([0, 1, 2, 3])
+y = np.array([10, 20, 30, 40])
 
-plt.subplot(2, 3, 2)\
+plt.subplot(2, 3, 2)
 plt.plot(x,y)
 
-x = np.array(\[0, 1, 2, 3])\
-y = np.array(\[3, 8, 1, 10])
+x = np.array([0, 1, 2, 3])
+y = np.array([3, 8, 1, 10])
 
-plt.subplot(2, 3, 3)\
+plt.subplot(2, 3, 3)
 plt.plot(x,y)
 
-x = np.array(\[0, 1, 2, 3])\
-y = np.array(\[10, 20, 30, 40])
+x = np.array([0, 1, 2, 3])
+y = np.array([10, 20, 30, 40])
 
-plt.subplot(2, 3, 4)\
+plt.subplot(2, 3, 4)
 plt.plot(x,y)
 
-x = np.array(\[0, 1, 2, 3])\
-y = np.array(\[3, 8, 1, 10])
+x = np.array([0, 1, 2, 3])
+y = np.array([3, 8, 1, 10])
 
-plt.subplot(2, 3, 5)\
+plt.subplot(2, 3, 5)
 plt.plot(x,y)
 
-x = np.array(\[0, 1, 2, 3])\
-y = np.array(\[10, 20, 30, 40])
+x = np.array([0, 1, 2, 3])
+y = np.array([10, 20, 30, 40])
 
-plt.subplot(2, 3, 6)\
+plt.subplot(2, 3, 6)
 plt.plot(x,y)
 
 plt.show()
@@ -135,23 +135,23 @@ You can add a title to each plot with the `title()` function:
 2 plots, with titles:
 
 ```python
-import matplotlib.pyplot as plt\
+import matplotlib.pyplot as plt
 import numpy as np
 
-\#plot 1:\
-x = np.array(\[0, 1, 2, 3])\
-y = np.array(\[3, 8, 1, 10])
+#plot 1:
+x = np.array([0, 1, 2, 3])
+y = np.array([3, 8, 1, 10])
 
-plt.subplot(1, 2, 1)\
-plt.plot(x,y)\
+plt.subplot(1, 2, 1)
+plt.plot(x,y)
 plt.title("SALES")
 
-\#plot 2:\
-x = np.array(\[0, 1, 2, 3])\
-y = np.array(\[10, 20, 30, 40])
+#plot 2:
+x = np.array([0, 1, 2, 3])
+y = np.array([10, 20, 30, 40])
 
-plt.subplot(1, 2, 2)\
-plt.plot(x,y)\
+plt.subplot(1, 2, 2)
+plt.plot(x,y)
 plt.title("INCOME")
 
 plt.show()
@@ -166,37 +166,27 @@ You can add a title to the entire figure with the `suptitle()` function:
 Add a title for the entire figure:
 
 ```python
-import matplotlib.pyplot as plt\
+import matplotlib.pyplot as plt
 import numpy as np
 
-\#plot 1:\
-x = np.array(\[0, 1, 2, 3])\
-y = np.array(\[3, 8, 1, 10])
+#plot 1:
+x = np.array([0, 1, 2, 3])
+y = np.array([3, 8, 1, 10])
 
-plt.subplot(1, 2, 1)\
-plt.plot(x,y)\
+plt.subplot(1, 2, 1)
+plt.plot(x,y)
 plt.title("SALES")
 
-\#plot 2:\
-x = np.array(\[0, 1, 2, 3])\
-y = np.array(\[10, 20, 30, 40])
+#plot 2:
+x = np.array([0, 1, 2, 3])
+y = np.array([10, 20, 30, 40])
 
-plt.subplot(1, 2, 2)\
-plt.plot(x,y)\
+plt.subplot(1, 2, 2)
+plt.plot(x,y)
 plt.title("INCOME")
 
-plt.suptitle("MY SHOP")\
+plt.suptitle("MY SHOP")
 plt.show()
 ```
 
 ![img\_matplotlib\_subplots5](https://user-images.githubusercontent.com/86244964/197056695-63a2abb5-0192-4768-84d3-90756888de38.png)
-
-{% hint style="info" %}
-#### Want to learn more?
-
-Be sure to sign up for <mark style="color:blue;">**The AI Engineer Master Class**</mark> to get more in depth explanations and video tutorials of end-to-end Machine Learning Projects.
-
-:arrow\_down::arrow\_down: Click the link below to sign up and stay up-to-date for new releases! :arrow\_down::arrow\_down:
-{% endhint %}
-
-{% embed url="https://www.getrevue.co/profile/dankornas" %}

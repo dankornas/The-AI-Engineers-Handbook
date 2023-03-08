@@ -12,14 +12,14 @@ With Pyplot, you can use the `grid()` function to add grid lines to the plot.
 Add grid lines to the plot:
 
 ```python
-import numpy as np\
+import numpy as np
 import matplotlib.pyplot as plt
 
-x = np.array(\[80, 85, 90, 95, 100, 105, 110, 115, 120, 125])\
-y = np.array(\[240, 250, 260, 270, 280, 290, 300, 310, 320, 330])
+x = np.array([80, 85, 90, 95, 100, 105, 110, 115, 120, 125])
+y = np.array([240, 250, 260, 270, 280, 290, 300, 310, 320, 330])
 
-plt.title("Sports Watch Data")\
-plt.xlabel("Average Pulse")\
+plt.title("Sports Watch Data")
+plt.xlabel("Average Pulse")
 plt.ylabel("Calorie Burnage")
 
 plt.plot(x, y)
@@ -40,14 +40,14 @@ Legal values are: 'x', 'y', and 'both'. Default value is 'both'.
 Display only grid lines for the x-axis:
 
 ```python
-import numpy as np\
+import numpy as np
 import matplotlib.pyplot as plt
 
-x = np.array(\[80, 85, 90, 95, 100, 105, 110, 115, 120, 125])\
-y = np.array(\[240, 250, 260, 270, 280, 290, 300, 310, 320, 330])
+x = np.array([80, 85, 90, 95, 100, 105, 110, 115, 120, 125])
+y = np.array([240, 250, 260, 270, 280, 290, 300, 310, 320, 330])
 
-plt.title("Sports Watch Data")\
-plt.xlabel("Average Pulse")\
+plt.title("Sports Watch Data")
+plt.xlabel("Average Pulse")
 plt.ylabel("Calorie Burnage")
 
 plt.plot(x, y)
@@ -62,14 +62,14 @@ plt.show()
 Display only grid lines for the y-axis:
 
 ```python
-import numpy as np\
+import numpy as np
 import matplotlib.pyplot as plt
 
-x = np.array(\[80, 85, 90, 95, 100, 105, 110, 115, 120, 125])\
-y = np.array(\[240, 250, 260, 270, 280, 290, 300, 310, 320, 330])
+x = np.array([80, 85, 90, 95, 100, 105, 110, 115, 120, 125])
+y = np.array([240, 250, 260, 270, 280, 290, 300, 310, 320, 330])
 
-plt.title("Sports Watch Data")\
-plt.xlabel("Average Pulse")\
+plt.title("Sports Watch Data")
+plt.xlabel("Average Pulse")
 plt.ylabel("Calorie Burnage")
 
 plt.plot(x, y)
@@ -88,14 +88,14 @@ You can also set the line properties of the grid, like this: grid(color = '_colo
 Set the line properties of the grid:
 
 ```python
-import numpy as np\
+import numpy as np
 import matplotlib.pyplot as plt
 
-x = np.array(\[80, 85, 90, 95, 100, 105, 110, 115, 120, 125])\
-y = np.array(\[240, 250, 260, 270, 280, 290, 300, 310, 320, 330])
+x = np.array([80, 85, 90, 95, 100, 105, 110, 115, 120, 125])
+y = np.array([240, 250, 260, 270, 280, 290, 300, 310, 320, 330])
 
-plt.title("Sports Watch Data")\
-plt.xlabel("Average Pulse")\
+plt.title("Sports Watch Data")
+plt.xlabel("Average Pulse")
 plt.ylabel("Calorie Burnage")
 
 plt.plot(x, y)
@@ -106,13 +106,3 @@ plt.show()
 ```
 
 ![img\_matplotlib\_grid\_kwargs](https://user-images.githubusercontent.com/86244964/197055229-0ab15e10-041a-467e-87ed-ccf73a7e172c.png)
-
-{% hint style="info" %}
-#### Want to learn more?
-
-Be sure to sign up for <mark style="color:blue;">**The AI Engineer Master Class**</mark> to get more in depth explanations and video tutorials of end-to-end Machine Learning Projects.
-
-:arrow\_down::arrow\_down: Click the link below to sign up and stay up-to-date for new releases! :arrow\_down::arrow\_down:
-{% endhint %}
-
-{% embed url="https://www.getrevue.co/profile/dankornas" %}

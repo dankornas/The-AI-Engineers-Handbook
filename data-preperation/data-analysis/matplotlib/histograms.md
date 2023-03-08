@@ -106,23 +106,13 @@ The `hist()` function will read the array and produce a histogram.
 A simple histogram:
 
 ```python
-import matplotlib.pyplot as plt\
+import matplotlib.pyplot as plt
 import numpy as np
 
 x = np.random.normal(170, 10, 250)
 
-plt.hist(x)\
+plt.hist(x)
 plt.show()&#x20;
 ```
 
 ![img\_matplotlib\_histogram1](https://user-images.githubusercontent.com/86244964/197152870-83a08a49-bd1a-4dd3-971f-3d41da2c13e7.png)
-
-{% hint style="info" %}
-#### Want to learn more?
-
-Be sure to sign up for <mark style="color:blue;">**The AI Engineer Master Class**</mark> to get more in depth explanations and video tutorials of end-to-end Machine Learning Projects.
-
-:arrow\_down::arrow\_down: Click the link below to sign up and stay up-to-date for new releases! :arrow\_down::arrow\_down:
-{% endhint %}
-
-{% embed url="https://www.getrevue.co/profile/dankornas" %}

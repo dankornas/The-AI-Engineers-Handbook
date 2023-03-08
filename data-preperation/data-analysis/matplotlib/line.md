@@ -12,12 +12,12 @@ You can use the keyword argument `linestyle`, or shorter `ls`, to change the sty
 Use a dotted line:
 
 ```python
-import matplotlib.pyplot as plt\
+import matplotlib.pyplot as plt
 import numpy as np
 
-ypoints = np.array(\[3, 8, 1, 10])
+ypoints = np.array([3, 8, 1, 10])
 
-plt.plot(ypoints, linestyle = 'dotted')\
+plt.plot(ypoints, linestyle = 'dotted')
 plt.show()
 ```
 
@@ -66,12 +66,12 @@ You can use the keyword argument `color` or the shorter `c` to set the color of 
 Set the line color to red.
 
 ```python
-import matplotlib.pyplot as plt\
+import matplotlib.pyplot as plt
 import numpy as np
 
-ypoints = np.array(\[3, 8, 1, 10])
+ypoints = np.array([3, 8, 1, 10])
 
-plt.plot(ypoints, color = 'r')\
+plt.plot(ypoints, color = 'r')
 plt.show()
 ```
 
@@ -94,8 +94,8 @@ Or any of the 140 supported color names.
 Plot with the color named "hotpink".
 
 ```python
-...\
-plt.plot(ypoints, c = 'hotpink')\
+...
+plt.plot(ypoints, c = 'hotpink')
 ...
 ```
 
@@ -110,12 +110,12 @@ The value is a floating number, in points.
 Plot with a 20.5pt wide line:
 
 ```python
-import matplotlib.pyplot as plt\
+import matplotlib.pyplot as plt
 import numpy as np
 
-ypoints = np.array(\[3, 8, 1, 10])
+ypoints = np.array([3, 8, 1, 10])
 
-plt.plot(ypoints, linewidth = '20.5')\
+plt.plot(ypoints, linewidth = '20.5')
 plt.show()
 ```
 
@@ -128,13 +128,13 @@ You can plot as many lines as you like by simply adding more `plt.plot()` functi
 Draw two lines by specifying a `plt.plot()` function for each line:
 
 ```python
-import matplotlib.pyplot as plt\
+import matplotlib.pyplot as plt
 import numpy as np
 
-y1 = np.array(\[3, 8, 1, 10])\
-y2 = np.array(\[6, 2, 7, 11])
+y1 = np.array([3, 8, 1, 10])
+y2 = np.array([6, 2, 7, 11])
 
-plt.plot(y1)\
+plt.plot(y1)
 plt.plot(y2)
 
 plt.show()
@@ -151,26 +151,16 @@ The x- and y- values come in pairs.
 Draw two lines by specifiyng the x- and y-point values for both lines:
 
 ```python
-import matplotlib.pyplot as plt\
+import matplotlib.pyplot as plt
 import numpy as np
 
-x1 = np.array(\[0, 1, 2, 3])\
-y1 = np.array(\[3, 8, 1, 10])\
-x2 = np.array(\[0, 1, 2, 3])\
-y2 = np.array(\[6, 2, 7, 11])
+x1 = np.array([0, 1, 2, 3])
+y1 = np.array([3, 8, 1, 10])
+x2 = np.array([0, 1, 2, 3])
+y2 = np.array([6, 2, 7, 11])
 
-plt.plot(x1, y1, x2, y2)\
+plt.plot(x1, y1, x2, y2)
 plt.show()
 ```
 
 ![img\_matplotlib\_line\_two](https://user-images.githubusercontent.com/86244964/197050729-e5fda45c-7783-4375-93b3-6fbf0e86d6a7.png)
-
-{% hint style="info" %}
-#### Want to learn more?
-
-Be sure to sign up for <mark style="color:blue;">**The AI Engineer Master Class**</mark> to get more in depth explanations and video tutorials of end-to-end Machine Learning Projects.
-
-:arrow\_down::arrow\_down: Click the link below to sign up and stay up-to-date for new releases! :arrow\_down::arrow\_down:
-{% endhint %}
-
-{% embed url="https://www.getrevue.co/profile/dankornas" %}

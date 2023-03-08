@@ -12,12 +12,12 @@ You can use the keyword argument `marker` to emphasize each point with a specifi
 Mark each point with a circle:
 
 ```python
-import matplotlib.pyplot as plt\
+import matplotlib.pyplot as plt
 import numpy as np
 
-ypoints = np.array(\[3, 8, 1, 10])
+ypoints = np.array([3, 8, 1, 10])
 
-plt.plot(ypoints, marker = 'o')\
+plt.plot(ypoints, marker = 'o')
 plt.show()
 ```
 
@@ -27,7 +27,7 @@ Mark each point with a star:
 
 ```python
 ...
-plt.plot(ypoints, marker = '\*')\
+plt.plot(ypoints, marker = '\*')
 ...
 ```
 
@@ -75,12 +75,12 @@ _`marker`_`|`_`line`_`|`_`color`_
 Mark each point with a circle:
 
 ```python
-import matplotlib.pyplot as plt\
+import matplotlib.pyplot as plt
 import numpy as np
 
-ypoints = np.array(\[3, 8, 1, 10])
+ypoints = np.array([3, 8, 1, 10])
 
-plt.plot(ypoints, 'o:r')\
+plt.plot(ypoints, 'o:r')
 plt.show()
 ```
 
@@ -125,12 +125,12 @@ You can use the keyword argument `markersize` or the shorter version, `ms` to se
 Set the size of the markers to 20:
 
 ```python
-import matplotlib.pyplot as plt\
+import matplotlib.pyplot as plt
 import numpy as np
 
-ypoints = np.array(\[3, 8, 1, 10])
+ypoints = np.array([3, 8, 1, 10])
 
-plt.plot(ypoints, marker = 'o', ms = 20)\
+plt.plot(ypoints, marker = 'o', ms = 20)
 plt.show()
 ```
 
@@ -143,12 +143,12 @@ You can use the keyword argument `markeredgecolor` or the shorter `mec` to set t
 Set the EDGE color to red:
 
 ```python
-import matplotlib.pyplot as plt\
+import matplotlib.pyplot as plt
 import numpy as np
 
 ypoints = np.array([3, 8, 1, 10])
 
-plt.plot(ypoints, marker = 'o', ms = 20, mec = 'r')\
+plt.plot(ypoints, marker = 'o', ms = 20, mec = 'r')
 plt.show()
 ```
 
@@ -159,12 +159,12 @@ You can use the keyword argument `markerfacecolor` or the shorter `mfc` to set t
 Set the FACE color to red:
 
 ```python
-import matplotlib.pyplot as plt\
+import matplotlib.pyplot as plt
 import numpy as np
 
-ypoints = np.array(\[3, 8, 1, 10])
+ypoints = np.array([3, 8, 1, 10])
 
-plt.plot(ypoints, marker = 'o', ms = 20, mfc = 'r')\
+plt.plot(ypoints, marker = 'o', ms = 20, mfc = 'r')
 plt.show()
 ```
 
@@ -175,12 +175,12 @@ Use _both_ the `mec` and `mfc` arguments to color of the entire marker:
 Set the color of both the _edge_ and the _face_ to red:
 
 ```python
-import matplotlib.pyplot as plt\
+import matplotlib.pyplot as plt
 import numpy as np
 
-ypoints = np.array(\[3, 8, 1, 10])
+ypoints = np.array([3, 8, 1, 10])
 
-plt.plot(ypoints, marker = 'o', ms = 20, mec = 'r', mfc = 'r')\
+plt.plot(ypoints, marker = 'o', ms = 20, mec = 'r', mfc = 'r')
 plt.show()
 ```
 
@@ -192,7 +192,7 @@ Mark each point with a beautiful green color:
 
 ```python
 ...
-plt.plot(ypoints, marker = 'o', ms = 20, mec = '#4CAF50', mfc = '#4CAF50')\
+plt.plot(ypoints, marker = 'o', ms = 20, mec = '#4CAF50', mfc = '#4CAF50')
 ...
 ```
 
@@ -204,18 +204,8 @@ Mark each point with the color named "hotpink":
 
 ```python
 ...
-plt.plot(ypoints, marker = 'o', ms = 20, mec = 'hotpink', mfc = 'hotpink')\
+plt.plot(ypoints, marker = 'o', ms = 20, mec = 'hotpink', mfc = 'hotpink')
 ...
 ```
 
 ![img\_matplotlib\_marker\_hotpink](https://user-images.githubusercontent.com/86244964/197049374-eaa1c062-00e4-4986-8913-d954106951d7.png)
-
-{% hint style="info" %}
-#### Want to learn more?
-
-Be sure to sign up for <mark style="color:blue;">**The AI Engineer Master Class**</mark> to get more in depth explanations and video tutorials of end-to-end Machine Learning Projects.
-
-:arrow\_down::arrow\_down: Click the link below to sign up and stay up-to-date for new releases! :arrow\_down::arrow\_down:
-{% endhint %}
-
-{% embed url="https://www.getrevue.co/profile/dankornas" %}

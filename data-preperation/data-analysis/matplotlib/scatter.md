@@ -14,13 +14,13 @@ The `scatter()` function plots one dot for each observation. It needs two arrays
 A simple scatter plot:
 
 ```python
-import matplotlib.pyplot as plt\
+import matplotlib.pyplot as plt
 import numpy as np
 
-x = np.array(\[5,7,8,7,2,17,2,9,4,11,12,9,6])\
-y = np.array(\[99,86,87,88,111,86,103,87,94,78,77,85,86])
+x = np.array([5,7,8,7,2,17,2,9,4,11,12,9,6])
+y = np.array([99,86,87,88,111,86,103,87,94,78,77,85,86])
 
-plt.scatter(x, y)\
+plt.scatter(x, y)
 plt.show()
 ```
 
@@ -43,17 +43,17 @@ In the example above, there seems to be a relationship between speed and age, bu
 Draw two plots on the same figure:
 
 ```python
-import matplotlib.pyplot as plt\
+import matplotlib.pyplot as plt
 import numpy as np
 
-\#day one, the age and speed of 13 cars:\
-x = np.array(\[5,7,8,7,2,17,2,9,4,11,12,9,6])\
-y = np.array(\[99,86,87,88,111,86,103,87,94,78,77,85,86])\
+#day one, the age and speed of 13 cars:
+x = np.array([5,7,8,7,2,17,2,9,4,11,12,9,6])
+y = np.array([99,86,87,88,111,86,103,87,94,78,77,85,86])
 plt.scatter(x, y)
 
-\#day two, the age and speed of 15 cars:\
-x = np.array(\[2,2,8,1,15,8,12,9,7,3,11,4,7,14,12])\
-y = np.array(\[100,105,84,105,90,99,90,95,94,100,79,112,91,80,85])\
+#day two, the age and speed of 15 cars:
+x = np.array([2,2,8,1,15,8,12,9,7,3,11,4,7,14,12])
+y = np.array([100,105,84,105,90,99,90,95,94,100,79,112,91,80,85])
 plt.scatter(x, y)
 
 plt.show()
@@ -72,7 +72,7 @@ You can set your own color for each scatter plot with the `color` or the `c` arg
 Set your own color of the markers:
 
 ```python
-import matplotlib.pyplot as plt\
+import matplotlib.pyplot as plt
 import numpy as np
 
 x = np.array([5,7,8,7,2,17,2,9,4,11,12,9,6])
@@ -95,12 +95,12 @@ You can even set a specific color for each dot by using an array of colors as va
 Set your own color of the markers:
 
 ```python
-import matplotlib.pyplot as plt\
+import matplotlib.pyplot as plt
 import numpy as np
 
-x = np.array(\[5,7,8,7,2,17,2,9,4,11,12,9,6])\
-y = np.array(\[99,86,87,88,111,86,103,87,94,78,77,85,86])\
-colors = np.array(\["red","green","blue","yellow","pink","black","orange","purple","beige","brown","gray","cyan","magenta"])
+x = np.array([5,7,8,7,2,17,2,9,4,11,12,9,6])
+y = np.array([99,86,87,88,111,86,103,87,94,78,77,85,86])
+colors = np.array(["red","green","blue","yellow","pink","black","orange","purple","beige","brown","gray","cyan","magenta"])
 
 plt.scatter(x, y, c=colors)
 
@@ -118,12 +118,12 @@ In addition you have to create an array with values (from 0 to 100), one value f
 Create a color array, and specify a colormap in the scatter plot:
 
 ```python
-import matplotlib.pyplot as plt\
+import matplotlib.pyplot as plt
 import numpy as np
 
-x = np.array(\[5,7,8,7,2,17,2,9,4,11,12,9,6])\
-y = np.array(\[99,86,87,88,111,86,103,87,94,78,77,85,86])\
-colors = np.array(\[0, 10, 20, 30, 40, 45, 50, 55, 60, 70, 80, 90, 100])
+x = np.array([5,7,8,7,2,17,2,9,4,11,12,9,6])
+y = np.array([99,86,87,88,111,86,103,87,94,78,77,85,86])
+colors = np.array([0, 10, 20, 30, 40, 45, 50, 55, 60, 70, 80, 90, 100])
 
 plt.scatter(x, y, c=colors, cmap='viridis')
 
@@ -137,12 +137,12 @@ You can include the colormap in the drawing by including the `plt.colorbar()` st
 Include the actual colormap:
 
 ```python
-import matplotlib.pyplot as plt\
+import matplotlib.pyplot as plt
 import numpy as np
 
-x = np.array(\[5,7,8,7,2,17,2,9,4,11,12,9,6])\
-y = np.array(\[99,86,87,88,111,86,103,87,94,78,77,85,86])\
-colors = np.array(\[0, 10, 20, 30, 40, 45, 50, 55, 60, 70, 80, 90, 100])
+x = np.array([5,7,8,7,2,17,2,9,4,11,12,9,6])
+y = np.array([99,86,87,88,111,86,103,87,94,78,77,85,86])
+colors = np.array([0, 10, 20, 30, 40, 45, 50, 55, 60, 70, 80, 90, 100])
 
 plt.scatter(x, y, c=colors, cmap='viridis')
 
@@ -164,12 +164,12 @@ Just like colors, make sure the array for sizes has the same length as the array
 Set your own size for the markers:
 
 ```python
-import matplotlib.pyplot as plt\
+import matplotlib.pyplot as plt
 import numpy as np
 
-x = np.array(\[5,7,8,7,2,17,2,9,4,11,12,9,6])\
-y = np.array(\[99,86,87,88,111,86,103,87,94,78,77,85,86])\
-sizes = np.array(\[20,50,100,200,500,1000,60,90,10,300,600,800,75])
+x = np.array([5,7,8,7,2,17,2,9,4,11,12,9,6])
+y = np.array([99,86,87,88,111,86,103,87,94,78,77,85,86])
+sizes = np.array([20,50,100,200,500,1000,60,90,10,300,600,800,75])
 
 plt.scatter(x, y, s=sizes)
 
@@ -187,12 +187,12 @@ Just like colors, make sure the array for sizes has the same length as the array
 Set your own size for the markers:
 
 ```python
-import matplotlib.pyplot as plt\
+import matplotlib.pyplot as plt
 import numpy as np
 
-x = np.array(\[5,7,8,7,2,17,2,9,4,11,12,9,6])\
-y = np.array(\[99,86,87,88,111,86,103,87,94,78,77,85,86])\
-sizes = np.array(\[20,50,100,200,500,1000,60,90,10,300,600,800,75])
+x = np.array([5,7,8,7,2,17,2,9,4,11,12,9,6])
+y = np.array([99,86,87,88,111,86,103,87,94,78,77,85,86])
+sizes = np.array([20,50,100,200,500,1000,60,90,10,300,600,800,75])
 
 plt.scatter(x, y, s=sizes, alpha=0.5)
 
@@ -208,13 +208,13 @@ You can combine a colormap with different sizes on the dots. This is best visual
 Create random arrays with 100 values for x-points, y-points, colors and sizes:
 
 ```python
-import matplotlib.pyplot as plt\
+import matplotlib.pyplot as plt
 import numpy as np
 
-x = np.random.randint(100, size=(100))\
-y = np.random.randint(100, size=(100))\
-colors = np.random.randint(100, size=(100))\
-sizes = 10 \* np.random.randint(100, size=(100))
+x = np.random.randint(100, size=(100))
+y = np.random.randint(100, size=(100))
+colors = np.random.randint(100, size=(100))
+sizes = 10 * np.random.randint(100, size=(100))
 
 plt.scatter(x, y, c=colors, s=sizes, alpha=0.5, cmap='nipy\_spectral')
 
@@ -224,13 +224,3 @@ plt.show()
 ```
 
 ![img\_matplotlib\_scatter\_combine](https://user-images.githubusercontent.com/86244964/197057981-d6acd483-762a-4f9a-a474-e7c766650dad.png)
-
-{% hint style="info" %}
-#### Want to learn more?
-
-Be sure to sign up for <mark style="color:blue;">**The AI Engineer Master Class**</mark> to get more in depth explanations and video tutorials of end-to-end Machine Learning Projects.
-
-:arrow\_down::arrow\_down: Click the link below to sign up and stay up-to-date for new releases! :arrow\_down::arrow\_down:
-{% endhint %}
-
-{% embed url="https://www.getrevue.co/profile/dankornas" %}

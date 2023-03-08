@@ -12,13 +12,13 @@ With Pyplot, you can use the `bar()` function to draw bar graphs.
 Draw 4 bars:
 
 ```python
-import matplotlib.pyplot as plt\
+import matplotlib.pyplot as plt
 import numpy as np
 
-x = np.array(\["A", "B", "C", "D"])\
-y = np.array(\[3, 8, 1, 10])
+x = np.array(["A", "B", "C", "D"])
+y = np.array([3, 8, 1, 10])
 
-plt.bar(x,y)\
+plt.bar(x,y)
 plt.show()
 ```
 
@@ -35,13 +35,13 @@ If you want the bars to be displayed horizontally instead of vertically, use the
 Draw 4 horizontal bars:
 
 ```python
-import matplotlib.pyplot as plt\
+import matplotlib.pyplot as plt
 import numpy as np
 
-x = np.array(\["A", "B", "C", "D"])\
-y = np.array(\[3, 8, 1, 10])
+x = np.array(["A", "B", "C", "D"])
+y = np.array([3, 8, 1, 10])
 
-plt.barh(x, y)\
+plt.barh(x, y)
 plt.show()
 ```
 
@@ -54,13 +54,13 @@ The `bar()` and `barh()` takes the keyword argument `color` to set the color of 
 Draw 4 red bars:
 
 ```python
-import matplotlib.pyplot as plt\
+import matplotlib.pyplot as plt
 import numpy as np
 
-x = np.array(\["A", "B", "C", "D"])\
-y = np.array(\[3, 8, 1, 10])
+x = np.array(["A", "B", "C", "D"])
+y = np.array([3, 8, 1, 10])
 
-plt.bar(x, y, color = "red")\
+plt.bar(x, y, color = "red")
 plt.show()
 ```
 
@@ -73,13 +73,13 @@ You can use any of the 140 supported color names.
 Draw 4 "hot pink" bars:
 
 ```python
-import matplotlib.pyplot as plt\
+import matplotlib.pyplot as plt
 import numpy as np
 
-x = np.array(\["A", "B", "C", "D"])\
-y = np.array(\[3, 8, 1, 10])
+x = np.array(["A", "B", "C", "D"])
+y = np.array([3, 8, 1, 10])
 
-plt.bar(x, y, color = "hotpink")\
+plt.bar(x, y, color = "hotpink")
 plt.show()
 ```
 
@@ -92,13 +92,13 @@ Or you can use Hexadecimal color values.
 Draw 4 bars with a beautiful green color:
 
 ```python
-import matplotlib.pyplot as plt\
+import matplotlib.pyplot as plt
 import numpy as np
 
-x = np.array(\["A", "B", "C", "D"])\
-y = np.array(\[3, 8, 1, 10])
+x = np.array(["A", "B", "C", "D"])
+y = np.array([3, 8, 1, 10])
 
-plt.bar(x, y, color = "#4CAF50")\
+plt.bar(x, y, color = "#4CAF50")
 plt.show()
 ```
 
@@ -111,13 +111,13 @@ The `bar()` takes the keyword argument `width` to set the width of the bars.
 Draw 4 very thin bars:
 
 ```python
-import matplotlib.pyplot as plt\
+import matplotlib.pyplot as plt
 import numpy as np
 
-x = np.array(\["A", "B", "C", "D"])\
-y = np.array(\[3, 8, 1, 10])
+x = np.array(["A", "B", "C", "D"])
+y = np.array([3, 8, 1, 10])
 
-plt.bar(x, y, width = 0.1)\
+plt.bar(x, y, width = 0.1)
 plt.show()
 ```
 
@@ -134,26 +134,16 @@ The `barh()` takes the keyword argument `height` to set the height of the bars.
 Draw 4 very thin bars:
 
 ```python
-import matplotlib.pyplot as plt\
+import matplotlib.pyplot as plt
 import numpy as np
 
-x = np.array(\["A", "B", "C", "D"])\
-y = np.array(\[3, 8, 1, 10])
+x = np.array(["A", "B", "C", "D"])
+y = np.array([3, 8, 1, 10])
 
-plt.barh(x, y, height = 0.1)\
+plt.barh(x, y, height = 0.1)
 plt.show()
 ```
 
 ![img\_matplotlib\_barh\_height](https://user-images.githubusercontent.com/86244964/197151997-c3b180a8-d383-44bc-96b1-fd76b8947271.png)
 
 The default height value is 0.8
-
-{% hint style="info" %}
-#### Want to learn more?
-
-Be sure to sign up for <mark style="color:blue;">**The AI Engineer Master Class**</mark> to get more in depth explanations and video tutorials of end-to-end Machine Learning Projects.
-
-:arrow\_down::arrow\_down: Click the link below to sign up and stay up-to-date for new releases! :arrow\_down::arrow\_down:
-{% endhint %}
-
-{% embed url="https://www.getrevue.co/profile/dankornas" %}
