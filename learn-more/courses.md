@@ -1,2 +1,6 @@
+---
+description: Coming Soon
+---
+
 # Courses
 
