@@ -1,167 +1,88 @@
 # Array Slicing
 
-***
+### Array Slicing
 
-### Slicing arrays
+Array slicing is the process of accessing a subset of elements from an array. In NumPy, slicing is done using the `:` operator, which allows you to specify a range of indices.
 
-Slicing in python means taking elements from one given index to another given index.
+### Slicing 1-D Arrays
 
-We pass slice instead of index like this: `[`_`start`_`:`_`end`_`]`.
+To slice a 1-dimensional array, you can use the `:` operator to specify the start and end indices of the slice. Here's an example:
 
-We can also define the step, like this: `[`_`start`_`:`_`end`_`:`_`step`_`]`.
-
-If we don't pass start its considered 0
-
-If we don't pass end its considered length of array in that dimension
-
-If we don't pass step its considered 1
-
-#### Example
-
-Slice elements from index 1 to index 5 from the following array:
-
+```python
 import numpy as np
 
-arr = np.array(\[1, 2, 3, 4, 5, 6, 7])
+# Create a 1-dimensional array
+arr = np.array([1, 2, 3, 4, 5])
 
-print(arr\[1:5])
+# Slice the array
+print(arr[1:4]) # Output: [2 3 4]
+```
 
-Try it Yourself »
-
-**Note:** The result _includes_ the start index, but _excludes_ the end index.
-
-#### Example
-
-Slice elements from index 4 to the end of the array:
-
-import numpy as np
-
-arr = np.array(\[1, 2, 3, 4, 5, 6, 7])
-
-print(arr\[4:])
-
-Try it Yourself »
-
-#### Example
-
-Slice elements from the beginning to index 4 (not included):
-
-import numpy as np
-
-arr = np.array(\[1, 2, 3, 4, 5, 6, 7])
-
-print(arr\[:4])
-
-Try it Yourself »
-
-***
-
-***
-
-### Negative Slicing
-
-Use the minus operator to refer to an index from the end:
-
-#### Example
-
-Slice from the index 3 from the end to index 1 from the end:
-
-import numpy as np
-
-arr = np.array(\[1, 2, 3, 4, 5, 6, 7])
-
-print(arr\[-3:-1])
-
-Try it Yourself »
-
-***
-
-### STEP
-
-Use the `step` value to determine the step of the slicing:
-
-#### Example
-
-Return every other element from index 1 to index 5:
-
-import numpy as np
-
-arr = np.array(\[1, 2, 3, 4, 5, 6, 7])
-
-print(arr\[1:5:2])
-
-Try it Yourself »
-
-#### Example
-
-Return every other element from the entire array:
-
-import numpy as np
-
-arr = np.array(\[1, 2, 3, 4, 5, 6, 7])
-
-print(arr\[::2])
-
-Try it Yourself »
-
-***
+In this example, we create a 1-dimensional array with the values `[1, 2, 3, 4, 5]`. We then use slicing to access a subset of the array containing the second, third, and fourth elements.
 
 ### Slicing 2-D Arrays
 
-#### Example
+To slice a 2-dimensional array, you can use the `:` operator with two indices. The first index refers to the rows to be sliced, and the second index refers to the columns to be sliced. Here's an example:
 
-From the second element, slice elements from index 1 to index 4 (not included):
-
+```python
 import numpy as np
 
-arr = np.array(\[\[1, 2, 3, 4, 5], \[6, 7, 8, 9, 10]])
+# Create a 2-dimensional array
+arr = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
 
-print(arr\[1, 1:4])
-
-Try it Yourself »
-
-**Note:** Remember that _second element_ has index 1.
-
-#### Example
-
-From both elements, return index 2:
-
-import numpy as np
-
-arr = np.array(\[\[1, 2, 3, 4, 5], \[6, 7, 8, 9, 10]])
-
-print(arr\[0:2, 2])
-
-Try it Yourself »
-
-#### Example
-
-From both elements, slice index 1 to index 4 (not included), this will return a 2-D array:
-
-import numpy as np
-
-arr = np.array(\[\[1, 2, 3, 4, 5], \[6, 7, 8, 9, 10]])
-
-print(arr\[0:2, 1:4])
-
-Try it Yourself »
-
-***
-
-### Test Yourself With Exercises
-
-### Exercise:
-
-Insert the correct slicing syntax to print the following selection of the array:
-
-Everything from (including) the second item to (not including) the fifth item.
-
-```
-arr = np.array([10, 15, 20, 25, 30, 35, 40])
-
-print(arr)
+# Slice the array
+print(arr[:2, 1:]) # Output: [[2 3] [5 6]]
 ```
 
-Start the Exercise
+In this example, we create a 2-dimensional array with the values:
 
-\
+```lua
+luaCopy code[[1 2 3]
+ [4 5 6]
+ [7 8 9]]
+```
+
+We then use slicing to access a subset of the array containing the first two rows and the second and third columns.
+
+### Slicing 3-D Arrays
+
+To slice a 3-dimensional array, you can use the `:` operator with three indices. The first index refers to the depth to be sliced, the second index refers to the rows to be sliced, and the third index refers to the columns to be sliced. Here's an example:
+
+```python
+import numpy as np
+
+# Create a 3-dimensional array
+arr = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
+
+# Slice the array
+print(arr[:1, 1:, :1]) # Output: [[[3]]]
+```
+
+In this example, we create a 3-dimensional array with the values:
+
+```lua
+[[[1 2]
+  [3 4]]
+
+ [[5 6]
+  [7 8]]]
+```
+
+We then use slicing to access a subset of the array containing the first depth, the second row, and the first column.
+
+### Omitting Indices
+
+If you omit the start index, the slice will start from the beginning of the array. If you omit the end index, the slice will go to the end of the array. Here's an example:
+
+```python
+import numpy as np
+
+# Create a 1-dimensional array
+arr = np.array([1, 2, 3, 4, 5])
+
+# Slice the array
+print(arr[2:]) # Output: [3 4 5]
+print(arr[:3]) # Output: [1 2 3]
+```
+
+In this example, we create a 1-dimensional array with the values `[1, 2, 3, 4, 5]`. We then use slicing to access a subset of the array containing all elements from the third element to the end, and all elements up to the third element.

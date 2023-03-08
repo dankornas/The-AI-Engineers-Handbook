@@ -1,162 +1,89 @@
 # Array Indexing
 
-***
+### Array Indexing
 
-### Access Array Elements
+Array indexing refers to the process of accessing individual elements of an array. NumPy arrays can be indexed in several ways, depending on the number of dimensions and the structure of the array.
 
-Array indexing is the same as accessing an array element.
+### Accessing Array Elements
 
-You can access an array element by referring to its index number.
+To access individual elements of an array, you can use square brackets and specify the index or indices of the element(s) you want to access. Here's an example:
 
-The indexes in NumPy arrays start with 0, meaning that the first element has index 0, and the second has index 1 etc.
-
-#### Example
-
-Get the first element from the following array:
-
+```python
 import numpy as np
 
-arr = np.array(\[1, 2, 3, 4])
+# Create a 1-dimensional array
+arr = np.array([1, 2, 3, 4, 5])
 
-print(arr\[0])
+# Access individual elements
+print(arr[0]) # Output: 1
+print(arr[2]) # Output: 3
+```
 
-Try it Yourself »
+In this example, we create a 1-dimensional array with the values `[1, 2, 3, 4, 5]`. We then use indexing to access the first and third elements of the array.
 
-#### Example
+### Accessing 2-D Arrays
 
-Get the second element from the following array.
+To access elements of a 2-dimensional array, you can use indexing with two indices. The first index refers to the row, and the second index refers to the column. Here's an example:
 
+```python
 import numpy as np
 
-arr = np.array(\[1, 2, 3, 4])
+# Create a 2-dimensional array
+arr = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
 
-print(arr\[1])
+# Access individual elements
+print(arr[0, 0]) # Output: 1
+print(arr[1, 2]) # Output: 6
+```
 
-Try it Yourself »
+In this example, we create a 2-dimensional array with the values:
 
-#### Example
+```lua
+[[1 2 3]
+ [4 5 6]
+ [7 8 9]]
+```
 
-Get third and fourth elements from the following array and add them.
+We then use indexing to access the first element (in the first row and first column) and the sixth element (in the second row and third column) of the array.
 
+### Accessing 3-D Arrays
+
+To access elements of a 3-dimensional array, you can use indexing with three indices. The first index refers to the depth, the second index refers to the row, and the third index refers to the column. Here's an example:
+
+```python
 import numpy as np
 
-arr = np.array(\[1, 2, 3, 4])
+# Create a 3-dimensional array
+arr = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
 
-print(arr\[2] + arr\[3])
+# Access individual elements
+print(arr[0, 1, 0]) # Output: 3
+print(arr[1, 0, 1]) # Output: 6
+```
 
-Try it Yourself »
+In this example, we create a 3-dimensional array with the values:
 
-***
+```lua
+[[[1 2]
+  [3 4]]
 
-***
+ [[5 6]
+  [7 8]]]
+```
 
-### Access 2-D Arrays
-
-To access elements from 2-D arrays we can use comma separated integers representing the dimension and the index of the element.
-
-Think of 2-D arrays like a table with rows and columns, where the row represents the dimension and the index represents the column.
-
-#### Example
-
-Access the element on the first row, second column:
-
-import numpy as np
-
-arr = np.array(\[\[1,2,3,4,5], \[6,7,8,9,10]])
-
-print('2nd element on 1st row: ', arr\[0, 1])
-
-Try it Yourself »
-
-#### Example
-
-Access the element on the 2nd row, 5th column:
-
-import numpy as np
-
-arr = np.array(\[\[1,2,3,4,5], \[6,7,8,9,10]])
-
-print('5th element on 2nd row: ', arr\[1, 4])
-
-Try it Yourself »
-
-***
-
-### Access 3-D Arrays
-
-To access elements from 3-D arrays we can use comma separated integers representing the dimensions and the index of the element.
-
-#### Example
-
-Access the third element of the second array of the first array:
-
-import numpy as np
-
-arr = np.array(\[\[\[1, 2, 3], \[4, 5, 6]], \[\[7, 8, 9], \[10, 11, 12]]])
-
-print(arr\[0, 1, 2])
-
-Try it Yourself »
-
-#### Example Explained
-
-`arr[0, 1, 2]` prints the value `6`.
-
-And this is why:
-
-The first number represents the first dimension, which contains two arrays:\
-\[\[1, 2, 3], \[4, 5, 6]]\
-and:\
-\[\[7, 8, 9], \[10, 11, 12]]\
-Since we selected `0`, we are left with the first array:\
-\[\[1, 2, 3], \[4, 5, 6]]
-
-The second number represents the second dimension, which also contains two arrays:\
-\[1, 2, 3]\
-and:\
-\[4, 5, 6]\
-Since we selected `1`, we are left with the second array:\
-\[4, 5, 6]
-
-The third number represents the third dimension, which contains three values:\
-4\
-5\
-6\
-Since we selected `2`, we end up with the third value:\
-6
-
-***
+We then use indexing to access the third element (in the first depth, second row, and first column) and the sixth element (in the second depth, first row, and second column) of the array.
 
 ### Negative Indexing
 
-Use negative indexing to access an array from the end.
+In addition to positive indices, NumPy arrays also support negative indices. Negative indices count from the end of the array, with `-1` referring to the last element, `-2` referring to the second-to-last element, and so on. Here's an example:
 
-#### Example
-
-Print the last element from the 2nd dim:
-
+```python
 import numpy as np
 
-arr = np.array(\[\[1,2,3,4,5], \[6,7,8,9,10]])
-
-print('Last element from 2nd dim: ', arr\[1, -1])
-
-Try it Yourself »
-
-***
-
-### Test Yourself With Exercises
-
-### Exercise:
-
-Insert the correct syntax for printing the first item in the array.
-
-```
+# Create a 1-dimensional array
 arr = np.array([1, 2, 3, 4, 5])
 
-print(arr)
+# Access individual elements using negative indices
+print(arr[-1]) # Output: 5
+print(arr[-3]) # Output: 3
 ```
-
-Start the Exercise
-
-\
